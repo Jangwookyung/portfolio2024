@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트1_선사박물관</title>
+
+    <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 외부스크립트연결 -->
+    <script src="js/js.js"></script>
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 폰트어썸연결 -->
+    <script src="https://kit.fontawesome.com/dc9b491e4c.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(function(){
+            // 공지사항, 보도자료 내용바꾸기
+            $('.box6-1 .titleBox>ul li').click(function(){
+                var i=$(this).index()
+                console.log(i)
+
+                $('.box6-1 .listBox>ul').css({'display':'none'})
+                $('.box6-1 .listBox>ul').eq(i).css({'display':'block'})
+
+                $('.box6-1 .titleBox>ul li').removeClass('on')
+                $(this).addClass('on')
+            })
+
+            // 예약정보 선택
+            $('.box3-2 .titleBox>ul li').click(function(){
+                var r=$(this).index()
+                
+                $('.box3-3 ul').css({'display':'none'})
+                $('.box3-3 ul').eq(r).css({'display':'block'})
+            })
+
+
+            // 예약 완료 팝업 및 예약 내용 초기화
+            $('.more').click(function(){
+
+                alert('예약이 완료되었습니다.')
+            })
+
+
+            // 선택날짜 보이기
+            $('.day td').click(function(){
+                $('.day td').removeClass('on')
+                $(this).addClass('on')
+
+                $('.cal h2 span').css({'display':'inline-block'})
+                
+                var d=$(this).text()
+                $('.cal h2 em').text('11월 '+d+'일')
+            })
+
+
+            // 유물소식 순서대로 보이기
+            var u=0;
+            $(function content(direction{
+                var b=
+            }))
+            
+            // 약도 내려받기
+            $('.box10 .txtBox .dn').click(function(){
+                alert('다운로드가 완료되었습니다.')
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <header class="box1">
+        <div class="box1-1">
+            <div class="logo">
+                <img src="img/top-logo.png" alt="">
+                </div>
+                <div class="gnb">
+                    <div class="util">
+                        <ul>
+                            <li><a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </a></li>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">박물관 소개</a></li>
+                            <li><a href="#">전시</a></li>
+                            <li><a href="#">예약</a></li>
+                            <li><a href="#">교육</a></li>
+                            <li><a href="#">유물정보</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                        </ul>
+                    </div>
+        </div>
+            </div>
+    </header>
+    <div class="box2">
+        <div class="slide">
+            <img src="img/museum-slide1.jpg" alt="">
+            <img src="img/museum-slide2.jpg" alt="">
+            <img src="img/museum-slide3.jpg" alt="">
+        </div>
+        <div class="txtBox">
+            <h2>대전선사박물관</h2>
+            <strong>이용안내</strong>
+            <p>동절기(11~2월) : 10:00~18:00 / 하절기(3~10월) : 10:00~19:00</p>
+        </div>
+    </div>
+    <div class="box3">
+        <div class="box3-1">
+            <img src="img/info-title.png" alt="">
+        </div>
+        
+        <div class="box3-2">
+            <div class="titleBox">
+                <ul>
+                    <li>개인</li>
+                    <li>단체</li>
+                    <li>교육프로그램</li>
+                </ul>
+            </div>
+            <div class="box3-3">
+                <div class="cal">
+                    <h2>
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        날짜 <span>선택된 날짜 : <em></em></span>
+                    </h2>
+                    <div class="cal01">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <h3>2023년 11월</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S</th>
+                                    <th>M</th>
+                                    <th>T</th>
+                                    <th>W</th>
+                                    <th>T</th>
+                                    <th>F</th>
+                                    <th>S</th>
+                                </tr>
+                            </thead>
+                
+                            <tbody class="day">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td class="today">15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="formbox">
+                    <h2>
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        예약 현황
+                    </h2>
+                    <ul class="reserv" style="display: block;">
+                        <li>
+                            <h3>이름</h3>
+                            <input type="text" class="blank" placeholder="홍길동">
+                        </li>
+                        <li>
+                            <h3>연락처</h3>
+                            <input type="text" class="blank" placeholder="숫자만 입력해주세요">
+                        </li>
+                        <li>
+                            <label for="people"><h3>인원</h3></label>
+                                <select name="people" id="people" class="blank">
+                                    <option value="1">1명</option>
+                                    <option value="2">2명</option>
+                                    <option value="3">3명</option>
+                                    <option value="4">4명</option>
+                                    <option value="4">5명</option>
+                                </select>
+                        </li>
+                    </ul>
+                    <ul class="reserv2">
+                        <li>
+                            <h3>이름</h3>
+                            <input type="text" class="blank" placeholder="홍길동">
+                        </li>
+                        <li>
+                            <h3>연락처</h3>
+                            <input type="text" class="blank" placeholder="숫자만 입력해주세요">
+                        </li>
+                        <li>
+                            <label for="people"><h3>인원</h3></label>
+                                <select name="people" id="people" class="blank">
+                                    <option value="6">6명</option>
+                                    <option value="7">7명</option>
+                                    <option value="8">8명</option>
+                                    <option value="9">9명</option>
+                                    <option value="10">10명</option>
+                                    <option value="11">11명</option>
+                                    <option value="12">12명</option>
+                                    <option value="13">13명</option>
+                                    <option value="14">14명</option>
+                                    <option value="15">15명</option>
+                                </select>
+                        </li>
+                    </ul>
+                    <ul class="prog">
+                        <li class="prog-T">
+                            <p>회차</p>
+                            <p>시간</p>
+                            <p>모집정원</p>
+                            <p>예약현황</p>
+                        </li>
+                        <li class="prog-Y">
+                            <p>1회</p>
+                            <p>09:00~10:30</p>
+                            <p>잔여 8명</p>
+                            <p class="prog-btnY"><span>예약가능<i class="fa fa-check-circle" aria-hidden="true"></i></span></p>
+                        </li>
+                        <li class="prog-N">
+                            <p>2회</p>
+                            <p>10:30~12:00</p>
+                            <p>잔여 0명</p>
+                            <p class="prog-btnN"><span>예약마감<i class="fa fa-times-circle" aria-hidden="true"></i></span></p>
+                        </li>
+                        <li class="prog-N">
+                            <p>3회</p>
+                            <p>12:00~13:30</p>
+                            <p>잔여 0명</p>
+                            <p class="prog-btnN"><span>예약마감<i class="fa fa-times-circle" aria-hidden="true"></i></span></p>
+                        </li>
+                        <li class="prog-Y">
+                            <p>4회</p>
+                            <p>13:30~15:00</p>
+                            <p>잔여 3명</p>
+                            <p class="prog-btnY"><span>예약가능<i class="fa fa-check-circle" aria-hidden="true"></i></span></p>
+                        </li>
+                    </ul>
+                </div>
+                <p class="more"><i class="fa fa-arrow-right" aria-hidden="true"></i></p>
+            </div>
+        </div>
+    </div>
+    <div class="box4">
+        <div class="title">
+            <img src="img/exhibit-title.png" alt="">
+        </div>
+     
+        <div class="listBox">
+            <ul>
+                <li>
+                    <img src="img/exh-img1.jpg" alt="">
+                    <p>구석기 문화관</p>
+                </li>
+                <li>
+                    <img src="img/exh-img2.jpg" alt="">
+                    <p>신석기 문화관</p>
+                </li>
+                <li>
+                    <img src="img/exh-img4.jpg" alt="">
+                    <p>청동기 문화관</p>
+                </li>
+                <li>
+                    <img src="img/exh-img5.jpg" alt="">
+                    <p>철기 문화관</p>
+                </li>
+                <li>
+                    <img src="img/exh-img3.jpg" alt="">
+                    <p>어린이 체험관</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="img/exh-img1.jpg" alt="">
+                    <p>구석기 문화관</p>
+                </li>
+                <li>
+                    <img src="img/exh-img2.jpg" alt="">
+                    <p>신석기 문화관</p>
+                </li>
+                <li>
+                    <img src="img/exh-img4.jpg" alt="">
+                    <p>청동기 문화관</p>
+                </li>
+                <li>
+                    <img src="img/exh-img5.jpg" alt="">
+                    <p>철기 문화관</p>
+                </li>
+                <li>
+                    <img src="img/exh-img3.jpg" alt="">
+                    <p>어린이 체험관</p>
+                </li>
+            </ul>
+        </div>
+        <!-- <p class="left">&#10094;</p>
+        <p class="right">&#10095;</p> -->
+    </div>
+    <div class="box5">
+        <div class="title">
+            <img src="img/program-title.png" alt="">
+        </div>
+
+        <div class="box5-1">
+            <div class="imgBox">
+               <img src="img/progrma-img.jpg" alt="">
+            </div>
+            <div class="txtBox">
+               <strong>어린이 / 청소년 / 가족
+                <br>교육 프로그램</strong>
+                <p>더보기</p>
+            </div>
+        </div>
+    </div>
+    <div class="box6">
+        <div class="title">
+            <img src="img/mnews-title.png" alt="">
+        </div>
+        <div class="box6-1">
+            <div class="titleBox">
+                <ul>
+                    <li class="on">공지사항</li>
+                    <li>보도자료</li>
+                </ul>
+            </div>
+            <div class="listBox" style="display: block;">
+                <ul class="notice">
+                    <li>[교육] 2023 대전선사박물관 10월 집콕탐험대 <청동기 탐험대 - 고인돌 테라리움 만들기> 안내
+                        <time datetime="2023-10-05">2023-10-05</time></li>
+                    <li>2023 대전선사박물관 추석연휴 휴관일 안내(※9/29(금), 10/4(수) 휴관)
+                        <time datetime="2023-09-19">2023-09-19</time>
+                    </li>
+                    <li>[교육] 2023 대전선사박물관 9월 집콕탐험대 <청동기 탐험대 - 청동기시대 족장만들기> 안내
+                        <time datetime="2023-09-08">2023-09-08</time></li>
+                    <li>대전시립박물관 모바일 앱(스마트 전시관람 시스템) 만족도 조사
+                        <time datetime="2023-07-04">2023-07-04</time>
+                    </li>
+                    <li>[공지] 모바일로 감상하는 대전선사박물관 전시
+                        <time datetime="2022-06-20">2022-06-20</time>
+                    </li>
+                </ul>
+                <ul class="news">
+                    <li>2020 대전선사박물관 특별전 <신비의 거울, 고려동경> 보도자료
+                        <time datetime="2020-12-31">2020-12-31</time></li>
+                    <li>2019 대전선사박물관 특별전 <고구려 고분벽화 모사도> 보도자료
+                        <time datetime="2019-11-07">2019-11-07</time>
+                    </li>
+                    <li>2019.5.선사박물관 아카데미 고고한 고대미술산책 개강
+                        <time datetime="2019-05-08">2019-05-08</time></li>
+                    <li>2019 제5회 대전음악제 보도자료
+                        <time datetime="2019-04-09">2019-04-09</time>
+                    </li>
+                    <li>2018 제4회 대전음악제 참가자 모집
+                        <time datetime="2018-01-31">2018-01-31</time>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box7">
+        <div class="title">
+            <img src="img/issueNews-title.png" alt="">
+        </div>
+        <div class="box7-inner">
+            <div class="imgBox">
+                <img src="img/issue-img.png" alt="">
+            </div>
+            <div class="box7-1" style="display: block;">
+                <div class="titleBox">대전의 구석기 시대 유적</div>
+                <div class="listBox">
+                    <div class="issue">
+                        <h3>구즉동 유적(九則洞 遺蹟)</h3>
+                        <p>오봉산 남쪽 자락의 구즉마을에 있습니다. 구릉성 산지에 자리하였는데, 지금부터 약 15,000년전에 사람들이 살았던 것으로 드러났습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box7-2">
+                <div class="titleBox">대전의 신석기 시대 유적</div>
+                <div class="listBox">
+                    <div class="issue">
+                        <h3>둔산동 유적(屯山洞 遺蹟)</h3>
+                        <p>갑천가 넓은 들판에 솟아있는 낮은 구릉의 북쪽경사면에 위치하고 있는데, 1991년 둔산신시가지를 개발할 때 발굴조사를 통해 유적이 확인되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box7-3">
+                <div class="titleBox">대전의 청동기 시대 유적</div>
+                <div class="listBox">
+                    <div class="issue">
+                        <h3>괴정동 유적(槐亭洞 遺蹟)</h3>
+                        <p>1967년 마을 주민이 밭을 갈다가 우연히 발견한 유적으로 국립박물관의 수습조사를 통해 세상에 알려지게 되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box7-4">
+                <div class="titleBox">대전의 초기철기시대 유적</div>
+                <div class="listBox">
+                    <div class="issue">
+                        <h3>자운동 · 추목동 유적</h3>
+                        <p>충남대학교 정문 서쪽언덕에서 남으로 벋은 능선에 자리하고 있습니다. 1994년 충남대학교 박물관이 조사하여 약 8개가량의 유적이 확인되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="top" onclick="content('prev')">&#9650;</p>
+        <p class="bottom" onclick="content('next')">&#9660;</p>
+    </div>
+    <div class="box8">
+        <div class="title">
+            <img src="img/online-title.png" alt="">
+        </div>
+        <div class="VRm">
+            <a href="https://djm.daejeon.go.kr/webvr/tour/djmuseum2/" target="_blank"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+            <img src="img/online-museum-img.jpg" alt="">
+            
+        </div>
+        
+    </div>
+    <div class="box9">
+        <div class="title">
+            <img src="img/album-title.png" alt="">
+        </div>
+        <div class="listBox">
+            <ul>
+                <li>
+                    <img src="img/album-img1.jpg" alt="">
+                    <p>[2023] 9월 집콕탐험대 체험사진</p>
+                </li>
+                <li>
+                    <img src="img/album-img2.jpg" alt="">
+                    <p>[2023] 6월 집콕탐험대 체험사진</p>
+                </li>
+                <li>
+                    <img src="img/album-img3.jpg" alt="">
+                    <p>[2023] 5월 집콕탐험대 체험사진</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box10">
+        <div class="title">
+            <img src="img/map-title.png" alt="">
+        </div>
+        <div class="mapBox">
+            <div class="txtBox">
+                <ul>
+                    <li>
+                        <h2>위치</h2>
+                        <p>(34084) 대전시 유성구 노은동로 126</p>
+                    </li>
+                    <li>
+                        <h2>전화</h2>
+                        <p>042) 270-2640~8</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <p class="dn">약도 내려받기</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51400.77596624034!2d127.25384795820315!3d36.371713799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654b6b5f0eca6b%3A0xbcda94071dc627c1!2z64yA7KCE7ISg7IKs67CV66y86rSA!5e0!3m2!1sko!2skr!4v1700014678092!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <footer></footer>
+    </div>
+</body>
+</html>

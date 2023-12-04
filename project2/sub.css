@@ -1,0 +1,932 @@
+/* 언어 설정 */
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* reset */
+* {
+   margin: 0;
+   padding: 0;
+}
+a {
+   text-decoration: none;
+   color: #000;
+}
+ul,ol {
+   list-style: none;
+}
+img {
+   border: none;
+   vertical-align: bottom;
+   }
+
+body {font-family: 'Goldman', sans-serif;}
+
+
+
+
+/* 팝업메뉴 설정 */
+.popUpBox {
+   font-family: 'Inter', sans-serif;
+   position: absolute;
+   width: 300px; background-color: #fff;
+   height: calc(120px + 90vh); 
+   top: 0;
+   left: -100%;
+   z-index: 100;
+}
+
+.popUpBox p {}
+.popUpBox nav i {
+   font-size: 22px;
+   padding-left: 18px;
+}
+
+.popUpBox nav i:hover {
+   cursor: pointer;
+   color: #999;
+}
+
+.popUpBox nav {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.popUpBox .gnb {
+   font-size: 18px;
+   padding-left: 40px;}
+.popUpBox .gnb li {padding-bottom: 29px;}
+
+.popUpBox .login {
+   font-size: 16px;
+   padding-top: 150px;
+   padding-left: 40px;
+   color: #888;
+}
+.popUpBox .login li {padding-bottom: 15px;}
+
+.popUpBox .snsSet {
+   display: flex;
+   text-align: center;
+   padding-top: 150px;
+}
+.popUpBox .snsSet li {padding: 0 17px;}
+.popUpBox .snsSet i {
+   font-size: 20px;
+   color: #888;}
+
+.popUpBox ul>li:hover {
+   cursor: pointer;
+   color: #CC1A2D;}
+.popUpBox ul>li:hover i{color: #333;}
+
+
+
+
+/* header 설정 ################################################*/
+.box1 {
+   background-color: #000;
+   height: 80px;
+}
+.box1-inner {
+   width: 80%;
+   height: 100%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.box1-inner p {}
+.box1-inner a {}
+.box1-inner i {
+   font-size: 20px;
+   color: #fff;
+}
+
+.box1-inner i:hover {color: #ccc;}
+
+.box1-inner span {
+
+}
+.box1-inner span a {
+   font-size: 32px;
+   letter-spacing: 7%;
+   font-weight: normal;
+   color: #fff;
+}
+.box1-inner ul {
+   display: flex;
+}
+.box1-inner li {
+   margin-left: 28px;
+   position: relative;
+}
+.box1-inner li a {}
+.box1-inner li i {
+   font-size: 20px;
+   color: #fff;}
+.box1-inner li .new {
+   background-color: #A50034;
+   color: #fff;
+   position: absolute;
+   font-size: 8px;
+   padding: 3px 6px;
+   border-radius: 50%;
+   right: -10px;
+   top: -10px;
+   display: none;
+}
+
+
+
+
+/* box2 전체 설정 #############################################*/
+.box2 {
+   background-color: #f0f0f0;
+   height: 90vh;
+}
+.box2-inner {
+   display: flex;
+   width: 80%;
+   margin: 0 auto;
+   height: 100%;
+}
+
+/* box2 */
+/* 왼쪽 텍스트박스 설정 */
+.box2 .txtBox {
+   width: 45%;
+   padding: 90px 60px;
+}
+
+.box2 .txtBox .tit {
+   font-size: 42px;
+   letter-spacing: 5%;
+   margin-bottom: 33px;
+   color: #1a1a1a;
+}
+.box2 .txtBox .price {
+   font-size: 32px;
+   letter-spacing: 5%;
+   color: #1a1a1a;
+}
+.box2 .txtBox hr {
+   margin: 27px 0;
+   color: #aaa;
+}
+.box2 .txtBox .option1 {
+   width: 80%;
+   margin: 0 auto;
+   font-family: 'Inter', sans-serif;
+}
+
+
+/* box2 */
+/* 할인쿠폰 설정 */
+.list {
+   position: relative;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   
+}
+.list span {
+   font-size: 20px;
+   letter-spacing: 5%;
+   color: #1a1a1a;
+}
+.list span i {
+   font-size: 19px;
+   color: #aaa;
+   margin-left: 7px;
+   vertical-align: middle;
+}
+.list span i:hover {
+   color: #999;
+   cursor: pointer;
+}
+.list .btn {
+   font-size: 14px;
+   letter-spacing: 5%;
+   background-color: #DA3E4E;
+   color: #f0f0f0;
+   padding: 10px 23px;
+   border-radius: 30px;
+   margin-left: 85px;
+}
+.list .btn i {
+   font-size: 13px;
+   color: #f0f0f0;
+   margin-left: 5px;
+   vertical-align: middle;
+}
+.list .btn:hover {
+   background-color: #BE2F3E;
+   cursor: pointer;}
+
+/* box2 */
+/* 할인쿠폰 안내 팝업 설정 */
+.list .popUp {
+   position: absolute;
+   display: none; /* display block로 */
+   left: 16%;
+   top: 70%; 
+   background-color: #fff;
+   width: 350px;
+   height: 200px;
+   padding: 25px 20px 20px 20px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   z-index: 10;
+}
+.list .popUp i {
+   font-size: 20px;
+   float: right;
+}
+.list .popUp p {
+   font-size: 16px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+.list .popUp ul {
+   width: 100%;
+   list-style: disc;
+}
+.list .popUp li {
+   width: 95%;
+   height: 100%;
+   margin-bottom: 15px;
+   margin-left: 18px;
+}
+.list .popUp i:hover {
+   cursor: pointer;
+   color: #555;
+}
+.list .popUp li:nth-child(3) {margin-bottom: 0px;}
+
+
+/* box2 */
+/* 할인쿠폰 받기 팝업 설정 */
+.list .couponDn {
+   background-color: #fff;
+   position: absolute;
+   z-index: 10;
+   left: 35%;
+   top: 100%;
+   width: 400px;
+   height: 500px;
+   padding: 30px;
+   border-radius: 30px;
+   display: none;
+}
+.list .couponDn ul {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+
+}
+.list .couponDn li {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 30%;
+   border: 2px solid #ccc;
+   border-radius: 30px;
+   padding-left: 30px;
+}
+.list .couponDn .txtBox {
+   font-size: 18px;
+   margin: 0;
+   padding: 0;
+   width: 80%;
+   height: 80px;
+   text-align: left;
+}
+.list .couponDn .txtBox strong {
+   color: #CC1A2D;
+   font-size: 22px;
+}
+.list .couponDn .txtBox span {
+   color: #CC1A2D;
+   font-size: 14px;
+}
+.list .couponDn .txtBox em {
+   font-size: 12px;
+   font-style: normal;
+}
+.list .couponDn li i {
+   font-size: 28px;
+   width: 20%;
+   color: #A50034;
+   text-align: center;
+}
+.list .couponDn li i:hover {
+   cursor: pointer;
+   color: #CC1A2D;
+}
+
+
+/* box2 */
+/* 추가구성 설정 */
+.formlist {
+   display: flex;
+   color: #1a1a1a;
+   justify-content: space-between;
+   align-items: flex-start;
+   margin-top: 32px;
+}
+.formlist span {
+   font-size: 20px;
+   letter-spacing: 5%;
+}
+.formlist .formBox {
+   position: relative;
+}
+.formlist .formBox ul {
+}
+.formlist .formBox li {
+   font-size: 14px;
+   background-color: #fff;
+   padding: 8px 17px;
+   border-radius: 5px;
+   margin-bottom: 18px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 335px;
+   border: 1px solid #fff;
+   box-sizing: border-box;
+}
+.formlist .formBox li i {
+   height: 11px;
+   width: 18px;
+   text-align: center;
+   transition: all 0.4s;
+}
+.formlist .formBox li:nth-child(3) {margin-bottom: 0px;}
+.formlist .formBox li:hover {
+   cursor: pointer;
+   border: 1px solid #666;
+}
+
+.formlist .formBox li:hover i{  /* 클릭했을때*/
+   transform: rotate(180deg);
+   transform-origin: center center;
+}
+
+/* box2 */
+/* 추가구성 선택지1 팝업 */
+.formBox>div {
+   display: block;
+   position: absolute;
+}
+.formBox .formpop1 { display: none; /* display block으로 */
+   left: 0;
+   top: 22%;
+   width: 333px;
+   height: 142px;
+   background-color: #fff;
+   border-radius: 0 0 5px 5px;
+   border-left: 1px solid #666;
+   border-right: 1px solid #666;
+   border-bottom: 1px solid #666;
+}
+.formBox .formpop1 ul {
+   width: 100%;
+   height: 100%;
+   margin-top: 10px;
+   border-radius: 0 0 5px 5px;
+}
+.formBox .formpop1 li {
+   border-radius: 0;
+   border: none;
+   margin: 0;
+   padding: 22px 20px;
+   width: 100%;
+   height: 30px;
+   font-size: 15px;
+}
+.formBox .formpop1 li:nth-child(3) {
+   border-radius: 0 0 5px 5px;
+}
+.formBox .formpop1 li:hover {
+   border: none;
+   cursor: pointer;
+   background-color: #ddd;
+}
+
+/* box2 */
+/* 추가구성 선택지2 팝업 */
+.formBox .formpop2 { display: none; /* display block으로 */
+   left: 0;
+   top: 56%;
+   width: 333px;
+   height: 98px;
+   background-color: #fff;
+   border-radius: 0 0 5px 5px;
+   border-left: 1px solid #666;
+   border-right: 1px solid #666;
+   border-bottom: 1px solid #666;
+}
+.formBox .formpop2 ul {
+   width: 100%;
+   height: 100%;
+   margin-top: 10px;
+   border-radius: 0 0 5px 5px;
+}
+.formBox .formpop2 li {
+   border-radius: 0;
+   border: none;
+   margin: 0;
+   padding: 22px 20px;
+   width: 100%;
+   height: 30px;
+   font-size: 15px;
+}
+.formBox .formpop2 li:nth-child(2) {
+   border-radius: 0 0 5px 5px;
+}
+.formBox .formpop2 li:hover {
+   border: none;
+   cursor: pointer;
+   background-color: #ddd;
+}
+
+/* box2 */
+/* 추가구성 선택지3 팝업 */
+.formBox .formpop3 { display: none; /* display block으로 */
+   left: 0;
+   top: 97%;
+   width: 333px;
+   height: 142px;
+   background-color: #fff;
+   border-radius: 0 0 5px 5px;
+   border-left: 1px solid #666;
+   border-right: 1px solid #666;
+   border-bottom: 1px solid #666;
+}
+.formBox .formpop3 ul {
+   width: 100%;
+   height: 100%;
+   margin-top: 10px;
+   border-radius: 0 0 5px 5px;
+}
+.formBox .formpop3 li {
+   border-radius: 0;
+   border: none;
+   margin: 0;
+   padding: 22px 20px;
+   width: 100%;
+   height: 30px;
+   font-size: 15px;
+}
+
+.formBox .formpop3 li:nth-child(3) {
+   border-radius: 0 0 5px 5px;
+}
+.formBox .formpop3 li:hover {
+   border: none;
+   cursor: pointer;
+   background-color: #ddd;
+}
+
+
+/* box2 */
+/* 수량 설정 */
+.box2 .txtBox .option2 {
+   width: 80%;
+   margin: 0 auto;
+   font-family: 'Inter', sans-serif;
+}
+.count {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+   margin-bottom: 20px;
+}
+.count span {
+   font-size: 20px;
+   letter-spacing: 5%;
+}
+.count .btn {
+   background-color: #fff;
+   width: 125px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 10px;
+}
+.count .btn button {
+   background-color: #fff;
+   border-radius: 10px;
+   border: none;
+   padding: 8px 9px;
+   margin: 0;
+}
+.count .btn button i {
+   font-size: 14px;
+   color: #888;
+}
+.count .btn input {
+   background-color: #fff;
+   border: none;
+   text-align: center;
+   margin: 0;
+   padding: 8px 0 8px 13px;
+   width: 50px;
+   font-size: 14px;
+}
+
+.count .btn button:hover {cursor: pointer;}
+.count .btn button:hover i {color: #333;}
+
+
+/* box2 */
+/* 총 합계 설정 */
+.allpriceBox {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.allpriceBox span {
+   font-size: 20px;
+   letter-spacing: 5%;
+}
+.allpriceBox .allprice {
+   font-family: 'Goldman', sans-serif;
+   color: #CC1A2D;
+   font-size: 32px;
+   letter-spacing: 5%;
+}
+
+
+/* box2 */
+/* 구매버튼 설정 */
+.btnBox {
+   display: flex;
+   width: 80%;
+   margin: 0 auto;
+   justify-content: space-around;
+   font-size: 20px;
+   margin-top: 38px;
+}
+.btnBox>div {
+   padding: 19px 80px;
+   border: 1px solid #1a1a1a;
+   border-radius: 45px;
+   transition: all 0.8s;
+}
+.btnBox .cartbtn {}
+.btnBox .buybtn {
+   background-color: #000;
+   color: #fff;
+   font-weight: bold;
+}
+
+.btnBox>div:hover {
+   cursor: pointer;
+   background-color: #000;
+   color: #fff;
+   font-weight: bold;
+}
+
+
+/* box2 */
+/* 우측 이미지 설정 */
+.box2 .imgBox {
+   width: 50%;
+   padding: 90px 0;
+}
+.box2 .mainImg {
+   width: 100%;
+   height: 80%;
+   background-color: ;
+   position: relative;
+}
+.box2 .mainImg ul {
+   width: 100%;
+   height: 100%;
+}
+.box2 .mainImg li {
+   background-color: ;
+   position: absolute;
+   left: 12.5%;
+   top: 10%;
+   display: none; 
+   overflow: hidden;
+}
+.box2 .mainImg img {
+   width: 100%;
+   height: 100%;
+}
+
+/* box2 */
+/* 이미지 프리뷰 설정 */
+.box2 .trailer {
+   width: 75%;
+   margin: 0 auto;
+}
+.box2 .trailer ul {
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.box2 .trailer li {
+   width: 100px;
+   height: 100px;
+
+}
+.box2 .trailer li img {
+   width: 100%;
+   height: 100%;
+   border-radius: 20px;
+   border: 1px solid #fff;
+}
+
+.box2 .trailer li img:hover {
+   border: #666 1px solid;
+   cursor: pointer;
+}
+
+
+
+
+/* box3 설정################################################## */
+.box3 {
+   background-color: #f0f0f0;
+   height: 20vh;
+   font-family: 'Inter', sans-serif;
+}
+.box3-inner {
+   width: 100%;
+   padding-top: 40px;
+}
+.box3-inner ul {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-top: #555 solid 2px;
+   border-bottom: 1px solid #ccc;
+}
+.box3-inner li {
+   font-size: 26px;
+   padding: 40px 125px;
+   margin: 0 25px;
+   border-bottom: 3px solid #999;
+}
+.box3-inner li:hover {
+   border-bottom: 3px solid #CC1A2D;
+   cursor: pointer;
+}
+
+
+
+
+/* box4 설정################################################## */
+.box4 {
+   background-color: #000;
+   width: 100%;
+   height: 80px;
+   position: relative;
+   overflow: hidden;
+}
+.box4 .slide {
+   height: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+.box4 .slide ul {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   position: absolute;
+}
+.box4 .slide li {
+   font-size: 20px;
+   letter-spacing: 5%;
+   color: #fff;
+   text-align: center;
+   box-sizing: border-box;
+   width: 33.3333%;
+   height: 30px;
+}
+.box4 .slide li strong {
+   font-weight: normal;
+   color: #CC1A2D;
+}
+.box4 .slide ul:nth-child(1) {
+   left: 0;
+   top: 25px;
+   animation: ani1 50s linear infinite;
+}
+.box4 .slide ul:nth-child(2) {
+   left: 100%;
+   top: 25px;
+   animation: ani2 50s linear infinite;
+}
+
+/* box4 */
+/* slide animation */
+@keyframes ani1 {
+   0% {left: 0;}
+   50% {left: -100%;}
+   50.00001% {left: 100%;}
+   100% {left: 0;}
+}
+@keyframes ani2 {
+   0% {left: 100%;}
+   50% {left: 0%;}
+   100% {left: -100%;}
+}
+
+
+
+
+/* box5 설정################################################## */
+.box5 {
+   height: 160vh;
+   background-color: #1a1a1a;
+   color: #fff;
+   position: relative;
+}
+.box5-top {
+   display: flex;
+   width: 100%;
+   height: 45%;
+}
+
+.box5 .imgBox {
+   width: 40%;
+   height: 100%;
+   text-align: right;
+}
+.box5 .imgBox img {
+   width: 500px;
+   height: 500px;
+   margin-top: 100px;
+}
+
+.box5 .txtBox {
+   width: 60%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.box5 .txtBox h2 {
+   font-size: 32px;
+   letter-spacing: 5%;
+   margin-bottom: 75px;
+}
+.box5 .txtBox p {
+   font-size: 20px;
+   letter-spacing: 10%;
+   line-height: 1.8;
+   width: 730px;
+}
+
+.box5 .vid {
+   width: 1300px;
+   height: 650px;
+   position: absolute;
+   left: 50%;
+   margin-left: -650px;
+   bottom: 50%;
+   margin-bottom: -620px;
+}
+.box5 .vid video {
+   width: 100%;
+   height: 100%;
+}
+
+
+
+/* box6 설정################################################## */
+.box6 {
+   background-color: #1a1a1a;
+   width: 100%;
+   height: 426px;
+   text-align: center;
+}
+.box6 img {
+   width: 1300px;
+   height: 426px;
+}
+
+
+
+
+/* box7 설정################################################# */
+.box7 {
+   background-color: #1a1a1a;
+   height: 180vh;
+   width: 100%;
+   color: #f0f0f0;
+   font-family: 'Inter', sans-serif;
+}
+
+.box7-1 {
+   display: flex;
+   height: 30%;
+   justify-content: center;
+   align-items: center;
+   padding-top: 90px;
+}
+.box7-1>div {width: 50%;}
+.box7-1 .imgBox {
+   text-align: center;
+}
+.box7-1 .imgBox img {
+   width: 588px;
+   height: 381px;
+}
+.box7-1 .txtBox {
+   text-align: left;
+}
+.box7-1 .txtBox h2 {
+   font-size: 32px;
+   letter-spacing: 5%;
+   line-height: 1.6;
+   margin-bottom: 45px;
+   border-left: #A50034 15px solid;
+   padding-left: 20px;
+}
+.box7-1 .txtBox p {
+   width: 550px;
+   font-size: 20px;
+   line-height: 1.8;
+   padding-left: 35px;
+}
+
+.box7-2 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 40%;
+}
+
+.box7-2 .txtBox {
+   width: 45%;
+   text-align: right;
+}
+.box7-2 .txtBox h2 {
+   font-size: 32px;
+   letter-spacing: 5%;
+   line-height: 1.6;
+   margin-bottom: 45px;
+   border-right: #A50034 15px solid;
+   padding-right: 20px;
+}
+.box7-2 .txtBox p {
+   width: 550px;
+   font-size: 20px;
+   line-height: 1.8;
+   padding-right: 35px;
+   margin-left: auto;
+}
+.box7-2 .imgBox {
+   text-align: center;
+   width: 55%;
+}
+.box7-2 .imgBox img {
+   width: 516px;
+   height: 633px;
+}
+
+.box7-3 {
+   height: 25%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.box7-3 span {
+   font-size: 150px;
+   font-family: 'Goldman', sans-serif;
+   letter-spacing: -5%;
+   color: #aaa;
+}
+.box7-3 span strong {
+   color: #A50034;
+}
+
+
+/* footer 설정 */
+.footer {
+   height: 300px;
+   width: 100%;
+   background-color: #000;
+}

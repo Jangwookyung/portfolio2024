@@ -1,0 +1,737 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* reset */
+* {margin: 0;
+   padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img {border: none;
+     vertical-align: bottom;}
+
+
+
+
+/* 박스1 설정 */
+.box1 {height: 124px;
+       background-color: #FBF8ED;
+       position: relative;}
+
+.box1-1{width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;}
+
+.logo {width: 290px;
+       height: 66px;
+       margin-top: 20px;}
+
+.gnb {}
+
+.util {margin-top: 20px;
+       margin-bottom: 32px;}
+.util ul {display: flex;
+          justify-content: flex-end;
+          align-items: flex-start;
+          margin-right: 32px;}
+.util li {}
+.util a {font-size: 16px;
+         color: #B0AB99;
+         padding: 0 20px;}
+.util li:nth-child(2) {border-left: solid #B0AB99 1px;}
+.util li:nth-child(3) {border-left: solid #B0AB99 1px;}
+
+.util i {height: 17px;
+         font-size: 20px;
+         padding-left: 20px;}
+.util .fa-search {position: absolute;
+                  right: 7%;
+                  top: 20px;
+                  width: 22px;
+                  font-size: 22px;
+                  font-weight: bold;
+                  color: #625E4E;}
+
+.util li:nth-child(2):hover a{color: #88B8AE;}
+.util li:nth-child(3):hover a{color: #88B8AE;}
+.util .fa-instagram:hover {color: #c13584;}
+.util .fa-twitter:hover {color: #1da1f2;}
+.util .fa-facebook:hover {color: #1877f2;}
+.util .fa-globe:hover {color: #34a853;}
+.util .fa-search:hover {color: #88B8AE;}
+
+.menu {}
+.menu ul {display: flex;}
+.menu li {}
+.menu a {font-size: 18px;
+         font-weight: bold;
+         color: #625E4E;
+         padding: 0 33px;}
+
+.menu a:hover {color: #88B8AE;}
+
+
+
+
+/* 박스2 설정 */
+.box2 {width: 100%;
+       height: 786px;
+       position: relative;
+       overflow: hidden;}
+
+.slide{width: 100%;
+       height: 100%;
+       display: flex;
+       animation: ani 15s infinite;}
+.slide img {width: 100%;
+            height: 100%;
+            flex: 0 0 auto;}
+
+.box2 .txtBox {position: absolute;
+               left: 5%;
+               bottom: 23%;}
+.box2 .txtBox h2 {font-size: 71px;
+                  color: #FBF9F1;
+                  letter-spacing: 20px;
+                  margin-bottom: 55px;}
+.box2 .txtBox strong {font-size: 24px;
+                      color: #FBF9F1;}
+.box2 .txtBox p {font-size: 20px;
+                 color: #FBF9F1;
+                 margin-top: 10px;}
+
+/* 박스2 사진 animation */
+@keyframes ani {
+       0% {margin-left:0;} 
+      10% {margin-left:0;} 
+      25% {margin-left:-100%;} 
+      35% {margin-left:-100%;} 
+      50% {margin-left:-200%;}
+      60% {margin-left:-200%;}
+      100% {margin-left:0;}
+}
+
+
+/* 박스3 설정 */
+.box3 {
+       height: 85vh;
+       position: relative;}
+
+.box3-1 {width: 90%;
+         margin: 0 auto;
+         height: 130px;
+         padding-bottom: 30px;}
+.box3-1 img {width: 330px;
+             height: 50px;
+             margin-top: 75px;}
+
+.box3-2 {width: 100%;
+         height: 100%;
+         display: flex;
+         justify-content: center;}
+
+.box3-2 .titleBox {}
+.box3-2 .titleBox ul {}
+.box3-2 .titleBox li {font-size: 28px;
+                      color: #B0AB99;
+                      background-color: #FBF8ED;
+                      padding: 30px 30px;
+                      text-align: center;
+                      margin-bottom: 10px;
+                      box-shadow: 0 4px 4px #888;}
+
+.box3-2 .titleBox li:hover {color: #88B8AE;
+                            font-weight: bold;
+                            cursor: pointer;
+                            box-shadow: none;
+                            border-bottom: 3px solid #88B8AE;}
+
+
+.box3-3 {background-color: #FBF8ED;
+         display: flex;
+         width: 70%;
+         height: 80%;
+         justify-content: space-around;
+         align-items: center;
+         box-shadow: 0 4px 4px #888;
+         position: relative;}
+
+.cal {position: relative;
+      width: 525px;}
+.cal h2 {font-size: 32px;
+         color: #625E4E;
+         padding-bottom: 25px;
+         border-bottom: 2px solid #B0AB99;
+         margin-bottom: 25px;}
+.cal h2 span {font-size: 20px;
+              display: none;
+              float: right;
+              padding-top: 20px;
+              color: #88B8AE}
+.cal h2 em {font-size: 20px;
+            font-weight: normal;
+            font-style: normal;
+            color: #88B8AE;}
+.cal i {font-size: 32px;
+        margin-right: 5px;
+        vertical-align: baseline;}
+
+.cal01 {width: 525px;
+        height: 385px;
+        background-color: #fff;
+        border: 2px solid #B0AB99;
+        border-radius: 30px;}
+.cal01 h3 {text-align: center;
+           font-size: 24px;
+           font-weight: normal;
+           color: #625E4E;
+           padding: 25px;}
+.cal01 .fa {color: #625E4E;
+            font-size: 20px;
+            font-weight: bold;}
+.cal01 .fa-chevron-left {position: absolute;
+                         left: 10%;
+                         top : 27%}
+.cal01 .fa-chevron-right {position: absolute;
+                          right: 10%;
+                          top: 27%;}
+
+.cal01 .fa:hover {cursor: pointer;}
+
+.cal01 table {width: 90%;
+              margin: 0 auto;
+              border-collapse: collapse;
+              font-size: 20px;}
+.cal01 th,td {text-align: center;
+              font-weight: normal;
+              color: #625E4E;}
+.cal01 th {background-color: rgba(217, 217, 217, 0.5);
+           color: #B0AB99;
+           padding: 5px 10px;}
+.cal01 td {padding: 10px;}
+.cal01 th:nth-child(1) {border-top-left-radius: 30px;
+                        border-bottom-left-radius: 30px;
+                        color: #BA2323;}
+.cal01 th:nth-child(7) {border-top-right-radius: 30px;
+                        border-bottom-right-radius: 30px;
+                        color: #2369BA;}
+
+.cal01 .day>tr td:nth-child(1){color: #BA2323;}
+.cal01 .day>tr td:nth-child(7){color: #2369BA;}
+.cal01 .today {}
+
+.cal01 td:hover {cursor: pointer;}
+
+.day td.on {font-size: 20px;
+            color: #88B8AE;
+            background-color: #BEF0E6}
+
+.formbox {}
+.formbox h2 {font-size: 32px;
+             color: #625E4E;
+             padding-bottom: 25px;
+             border-bottom: 2px solid #B0AB99;
+             margin-bottom: 25px;}
+.formbox>i {font-size: 32px;
+            margin-right: 5px;
+            vertical-align: baseline;}
+
+.reserv {display: none;
+         width: 360px;
+         height: 390px;}
+.reserv li {margin-bottom: 35px;}
+.reserv h3 {font-size: 24px;
+             color: #625E4E;
+             margin-bottom: 15px;}
+.reserv .blank {width: 350px;
+                height: 30px;
+                text-align: center;
+                font-size: 18px;
+                border: #B0AB99 1px solid;
+                border-radius: 30px;
+                display: inline-block;
+                background-color: #fff;}
+
+.reserv2 {display: none;
+          width: 360px;
+          height: 390px;}
+.reserv2 li {margin-bottom: 35px;}
+.reserv2 h3 {font-size: 24px;
+             color: #625E4E;
+             margin-bottom: 15px;}
+.reserv2 .blank {width: 350px;
+                height: 30px;
+                text-align: center;
+                font-size: 18px;
+                border: #B0AB99 1px solid;
+                border-radius: 30px;
+                display: inline-block;
+                background-color: #fff;}
+
+.prog {width: 525px;
+       height: 390px;
+       display: none;}
+.prog>li {width: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-start;}
+.prog>li p {color: #625E4E;}
+
+.prog .prog-Y,.prog-N {margin-bottom: 20px;}
+.prog-Y:hover {border: 1px solid #88B8AE;
+               cursor: pointer;}
+
+.prog-btnY {background-color: #BEF0E6;
+            border-radius: 30px;}
+.prog-btnY span {padding: 0 10px;}
+.prog-btnY i {color: #88B8AE;
+              margin-left: 5px;}
+
+.prog-btnN {background-color: #BEBEBE;
+            border-radius: 30px;}
+.prog-btnN span {padding: 0 10px;}
+.prog-btnN i {color: #818181;
+              margin-left: 5px;}
+
+
+.prog-T p {font-size: 20px;
+          margin-bottom: 40px;}
+.prog-Y {background-color: #fff;
+         border-radius: 30px;
+         border: 1px solid #B0AB99;}
+.prog-Y p {padding: 10px 0;
+           margin: 5px 0;}
+
+.prog-N {background-color: #d9d9d9;
+         border-radius: 30px;
+         border: 1px solid #625E4E;}
+.prog-N p {padding: 10px 0;
+           margin: 5px 0;}
+
+
+
+.more {position: absolute;
+       right: 5%;
+       bottom: 5%;}
+.more i {font-size: 30px;
+         color: #88B8AE;
+         border: 1px solid #B0AB99;
+         padding: 10px 45px;
+         background-color: #fff;
+         border-radius: 30px;
+         box-shadow: 0 2px 2px 2px #888;}
+
+.more:hover {cursor: pointer;}
+.more:hover i {border: 2px solid #B0AB99;
+               box-shadow: none;}
+
+
+
+/* 박스4 설정 */
+.box4 {margin-top: 50px;
+       height: 60vh;
+       position: relative;
+       overflow: hidden;}
+.box4 .title{width: 90%;
+             margin: 0 auto;
+             padding-bottom: 30px;}
+.box4 .title img {width: 150px;
+                  height: 50px;}
+
+.box4 .listBox {padding: 40px 140px;
+                height: 360px;
+                background-color: #FBF8ED;
+                display: flex;}
+.box4 .listBox ul {width: 100%;
+                   display: flex;
+                   justify-content: space-between;
+                   align-items: center;
+                   position: absolute;}
+.box4 .listBox li {margin-right: 3%;}
+.box4 .listBox img {width: 450px;
+                    height: 290px;}
+.box4 .listBox p {background-color: #BEF0E6;
+                  text-align: center;
+                  width: 100%;
+                  height: 50px;
+                  font-size: 20px;
+                  padding-top: 20px;}
+
+.box4 .listBox ul:nth-child(1) {left: 0%;
+       animation: exh-slide1 90s linear infinite;}
+.box4 .listBox ul:nth-child(2) {left: 133%;
+       animation: exh-slide2 90s linear infinite;}
+.box4 .listBox:hover ul{animation-play-state: paused;}
+.box4 .listBox li:hover {text-decoration: dashed;}
+
+/* box4 listBox이미지 슬라이드 애니메이션 */
+@keyframes exh-slide2 {
+       0% {left : 0%}
+       50%{left: -133%;}
+       50.00001% {left: 133%;}
+       100%{left: 0;}
+}
+
+@keyframes exh-slide1 {
+       0%{left: 133%;}
+       50%{left: 0;}
+       100%{left: -133%;}
+}
+
+
+
+/* .left {position: absolute;
+       padding: 10px 20px;
+       background-color: #BEF0E6;
+       border-radius: 0 50px 50px 0 ;
+       color: #88B8AE;
+       font-size: 32px;
+       left: 0;
+       top: 40%;}
+.right {position: absolute;
+        padding: 10px 20px;
+        background-color: #BEF0E6;
+        border-radius: 50px 0 0 50px ;
+        color: #88B8AE;
+        font-size: 32px;
+        right: 0;
+        top: 40%;}
+
+.left:hover {background-color: #88B8AE;
+             color: #BEF0E6;
+             cursor: pointer;}
+.right:hover {background-color: #88B8AE;
+              color: #BEF0E6;
+              cursor: pointer;} */
+
+
+/* 박스5 설정 */
+.box5 {
+       height: 60vh;}
+.box5 .title {width: 90%;
+              margin: 0 auto;
+              padding-bottom: 30px;}
+.box5 .title img {width: 335px;
+                  height: 50px;}
+
+.box5-1 {width: 90%;
+         margin: 0 auto;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         background-color: #FBF8ED;
+         padding: 42px 0;}
+.box5 .imgBox {width: 820px;
+               height: 280px;}
+.box5 .imgBox img {width: 100%;
+                   height: 100%;}
+
+.box5 .txtBox {text-align: center;}
+.box5 .txtBox strong {font-size: 32px;
+                      color: #625E4E;
+                      font-weight: normal;}
+.box5 .txtBox p {background-color: #BEF0E6;
+                 color: #625E4E;
+                 font-size: 24px;
+                 padding: 15px 0;
+                 margin-top: 20px;}
+
+.box5 .txtBox p:hover {background-color: #88B8AE;
+                       color: #BEF0E6;
+                       cursor: pointer;}
+
+
+
+/* 박스6 설정 */
+.box6 {
+       height: 80vh;}
+.box6 .title {width: 90%;
+              margin: 0 auto;
+              padding-bottom: 30px;}
+.box6 .title img {width: 290px;
+                  height: 50px;}
+
+.box6-1 {background-color: #FBF8ED;
+         width: 85%;
+         margin: 0 auto;
+         height: 530px;
+         padding: 30px 55px;
+         position: relative;}
+
+.box6-1 .titleBox {margin-bottom: 60px;}
+.box6-1 .titleBox ul {display: flex;}
+.box6-1 .titleBox li {font-size: 24px;
+                      color: #625E4E;
+                      font-weight: bold;
+                      margin-right: 60px;
+                      padding-right: 60px;}
+.box6-1 .titleBox li:nth-child(1) {border-right: 1px solid #B0AB99;}
+.box6-1 .titleBox .on {color: #88B8AE;}
+
+.box6-1 .titleBox li:hover {color: #88B8AE;
+                            cursor: pointer;}
+
+.box6-1 .listBox {}
+.box6-1 .listBox>ul {position: absolute;
+                     left: 6%;
+                     top: 21%;
+                     width: 88%;
+                     height: 390px;}
+
+.box6-1 .listBox .notice {list-style: disc;}
+.box6-1 .listBox .notice li {font-size: 24px;
+                             color: #534E3B;
+                             margin-bottom: 55px;}
+.box6-1 .listBox .notice time {font-size: 16px;
+                               color: #B0AB99;
+                               float: right;}
+
+.box6-1 .listBox li:hover {color: #88B8AE;
+                           cursor: pointer;}
+.box6-1 .listBox li:hover time {color: #88B8AE;
+                             cursor: pointer;}
+
+
+.box6-1 .listBox .news {list-style: disc;
+                        display: none;}
+.box6-1 .listBox .news li {font-size: 24px;
+                             color: #534E3B;
+                             margin-bottom: 55px;}
+.box6-1 .listBox .news time {font-size: 16px;
+                               color: #B0AB99;
+                               float: right;}
+
+
+
+
+/* 박스7 설정 */
+.box7 {
+       height: 50vh;
+       position: relative;}
+
+.box7 .title {width: 90%;
+              margin: 0 auto;
+              padding-bottom: 30px}
+.box7 .title img {width: 250px;
+                  height: 50px;}
+
+.box7-inner {background-image: url(img/issue-back.jpg);
+              width: 100%;
+              height: 300px;
+              background-repeat: no-repeat;
+              background-size: cover;}
+
+.box7 .imgBox {margin-left: 10%;
+               padding-top: 120px;}
+.box7 .imgBox img {}
+
+.box7-1 {}
+.box7-1 .titleBox {position: absolute;
+                   left: 9%;
+                   top: 21%;
+                   font-size: 22px;
+                   color: #fff}
+.box7-1 .listBox {width: 100%;
+                        height: 100%;}
+.box7-1 .issue {color: #625E4E;
+                 position: absolute;
+                 left: 20%;
+                 top: 41%;
+                 width: 80%;
+                 height: 130px;}
+.box7-1 .issue h3 {margin-bottom: 20px;
+                    font-size: 28px;}
+.box7-1 .issue p {font-size: 28px;
+                   width: 80%;}
+
+
+.box7-2 {display: none;}
+.box7-2 .titleBox {position: absolute;
+                   left: 9%;
+                   top: 21%; 
+                   font-size: 22px;
+                   color: #fff}
+.box7-2 .listBox {width: 100%;
+                        height: 100%;}
+.box7-2 .issue {color: #625E4E;
+                 position: absolute;
+                 left: 20%;
+                 top: 41%;
+                 width: 80%;
+                 height: 130px;}
+.box7-2 .issue h3 {margin-bottom: 20px;
+                    font-size: 28px;}
+.box7-2 .issue p {font-size: 28px;
+                   width: 80%;}
+
+
+.box7-3 {display: none;}
+.box7-3 .titleBox {position: absolute;
+                   left: 9%;
+                   top: 21%; 
+                   font-size: 22px;
+                   color: #fff}
+.box7-3 .listBox {width: 100%;
+                        height: 100%;}
+.box7-3 .issue {color: #625E4E;
+                 position: absolute;
+                 left: 20%;
+                 top: 41%;
+                 width: 80%;
+                 height: 130px;}
+.box7-3 .issue h3 {margin-bottom: 20px;
+                    font-size: 28px;}
+.box7-3 .issue p {font-size: 28px;
+                   width: 80%;}
+
+
+.box7-4 {display: none;}
+.box7-4 .titleBox {position: absolute;
+                   left: 9%;
+                   top: 21%; 
+                   font-size: 22px;
+                   color: #fff}
+.box7-4 .listBox {width: 100%;
+                        height: 100%;}
+.box7-4 .issue {color: #625E4E;
+                 position: absolute;
+                 left: 20%;
+                 top: 41%;
+                 width: 80%;
+                 height: 130px;}
+.box7-4 .issue h3 {margin-bottom: 20px;
+                    font-size: 28px;}
+.box7-4 .issue p {font-size: 28px;
+                   width: 80%;}
+
+
+.box7 .top {position: absolute;
+            right: 7%;
+            top: 40%;
+            font-size: 28px;
+            color: #B0AB99;}
+.box7 .bottom {position: absolute;
+               right: 7%;
+               bottom: 30%;
+               font-size: 28px;
+               color: #B0AB99;}
+
+.box7>p:hover {cursor: pointer;
+               color: #625E4E;}
+
+
+
+
+
+/* 박스8 설정 */
+.box8 {height: 85vh;
+       width: 100%;
+       background-color: #FBF8ED;
+       position: relative;}
+
+.box8 .title {padding-left: 5%;
+              margin-top: 50px;
+              padding-bottom: 30px;
+              background-color: #fff;}
+.box8 .title img {width: 335px;
+                  height: 50px;}
+
+.box8 .VRm {width: 85%;
+            margin: 0 auto;
+            height: 740px;
+            overflow: hidden;}
+.box8 .VRm img {width: 100%;
+                height: 100%;}
+
+.box8 .VRm a {position: absolute;
+              left: 50%;
+              top: 50%;
+              margin-left: -75px;
+              margin-top: -30px;}
+.box8 .VRm i {font-size: 150px;
+              color: #BEF0E6}
+
+
+
+/* 박스9 설정 */
+.box9 {height: 70vh;
+       margin-top: 80px;}
+.box9 .title {margin-left: 5%;
+              padding-bottom: 40px;}
+.box9 .title img {width: 235px;
+                  height: 50px;}
+
+.box9 .listBox {width: 80%;
+                margin: 0 auto;}
+.box9 .listBox ul {display: flex;
+                   justify-content: space-between;}
+.box9 .listBox li {background-color: #FBF8ED;
+                   padding: 25px 20px 55px 20px;
+                   border-radius: 20px;
+                   box-shadow: 0 0 8px #888;}
+.box9 .listBox img {width: 385px;
+                    height: 380px;}
+.box9 .listBox p {font-size: 20px;
+                  color: #534E3B;
+                  text-align: center;
+                  margin-top: 40px;}
+
+
+
+
+/* 박스10 설정 */
+.box10 {
+        height: 700px;
+        margin-top: 75px;}
+
+.box10 .title {margin-left: 5%;
+               margin-bottom: 30px;}
+.box10 .title img {width: 250px;
+                   height: 50px;}
+
+.box10 .mapBox {display: flex;
+                justify-content: center;
+                padding-top: 30px;}
+
+.box10 .txtBox {width: 420px;
+                height: 420px;
+                background-color: #EEE6C4;
+                color: #625E4E;
+                padding: 50px;}
+.box10 .txtBox ul {height: 100%;}
+.box10 .txtBox li {padding-bottom: 45px;}
+.box10 .txtBox h2 {font-size: 20px;
+                   margin-bottom: 10px;}
+.box10 .txtBox p {font-size: 18px;}
+
+.box10 .txtBox li:nth-child(3) {margin-top: 130px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex;
+                                background-color: #FBF8ED;
+                                border-radius: 30px;
+                                width: 235px;
+                                padding: 15px 30px;
+                                margin-left: 60px;}
+.box10 .txtBox li:nth-child(3) p{font-size: 20px;
+                                 color: #625E4E;}                          
+.box10 .txtBox i {color: #88B8AE;
+                  font-size: 24px;
+                  vertical-align: baseline;
+                  padding-right: 13px;}
+
+.box10 .txtBox li:nth-child(3):hover {border: 2px solid #B0AB99;
+                                      cursor: pointer;}
+.box10 .map {width: 865px;
+             height: 520px;}
+.box10 iframe {width: 100%;
+               height: 100%;}
+
+.box10 .map {}
+.box10 iframe {}
+
+.footer {background-color: #625E4E;
+         height: 280px;
+         margin-top: 100px;}

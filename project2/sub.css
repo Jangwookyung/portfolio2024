@@ -27,61 +27,49 @@ body {font-family: 'Goldman', sans-serif;}
 
 
 /* 팝업메뉴 설정 */
-.popUpBox {
-   font-family: 'Inter', sans-serif;
+.popUpBox {font-family: 'Inter', sans-serif;
    position: absolute;
    width: 300px; background-color: #fff;
    height: calc(120px + 90vh); 
    top: 0;
    left: -100%;
-   z-index: 100;
-}
+   z-index: 100;}
 
 .popUpBox p {}
-.popUpBox nav i {
-   font-size: 22px;
-   padding-left: 18px;
-}
+.popUpBox nav .fa-times-circle-o {font-size: 22px;
+                           float: right;
+                           padding-right: 30px;}
 
-.popUpBox nav i:hover {
-   cursor: pointer;
-   color: #999;
-}
+.popUpBox nav i:hover {cursor: pointer;
+               color: #999;}
 
-.popUpBox nav {
-   height: 100%;
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-}
+.popUpBox nav {height: 100%;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;}
 
-.popUpBox .gnb {
-   font-size: 18px;
-   padding-left: 40px;}
+.popUpBox .gnb {font-size: 18px;
+        padding-left: 40px;}
 .popUpBox .gnb li {padding-bottom: 29px;}
 
-.popUpBox .login {
-   font-size: 16px;
-   padding-top: 150px;
-   padding-left: 40px;
-   color: #888;
-}
+.popUpBox .login {font-size: 16px;
+          padding-top: 150px;
+          padding-left: 40px;
+          color: #888;}
 .popUpBox .login li {padding-bottom: 15px;}
 
-.popUpBox .snsSet {
-   display: flex;
-   text-align: center;
-   padding-top: 150px;
-}
+.popUpBox .snsSet {display: flex;
+           text-align: center;
+           padding-top: 150px;
+           padding-left: 10px;}
 .popUpBox .snsSet li {padding: 0 17px;}
-.popUpBox .snsSet i {
-   font-size: 20px;
-   color: #888;}
+.popUpBox .snsSet li a {padding-left: 15px;}
+.popUpBox .snsSet i {font-size: 20px;
+             color: #888;}
 
-.popUpBox ul>li:hover {
-   cursor: pointer;
-   color: #CC1A2D;}
+.popUpBox ul>li:hover {cursor: pointer;
+               color: #CC1A2D;}
 .popUpBox ul>li:hover i{color: #333;}
 
 
@@ -836,6 +824,7 @@ body {font-family: 'Goldman', sans-serif;}
    width: 100%;
    color: #f0f0f0;
    font-family: 'Inter', sans-serif;
+   overflow: hidden;
 }
 
 .box7-1 {
@@ -844,10 +833,16 @@ body {font-family: 'Goldman', sans-serif;}
    justify-content: center;
    align-items: center;
    padding-top: 90px;
+   position: relative;
 }
-.box7-1>div {width: 50%;}
+.box7-1>div {
+   width: 50%;
+   position: absolute;
+}
 .box7-1 .imgBox {
    text-align: center;
+   left: -100%;
+   top: 25%;
 }
 .box7-1 .imgBox img {
    width: 588px;
@@ -855,6 +850,8 @@ body {font-family: 'Goldman', sans-serif;}
 }
 .box7-1 .txtBox {
    text-align: left;
+   right: -100%;
+   top: 30%;
 }
 .box7-1 .txtBox h2 {
    font-size: 32px;
@@ -876,11 +873,14 @@ body {font-family: 'Goldman', sans-serif;}
    justify-content: center;
    align-items: center;
    height: 40%;
+   position: relative;
 }
-
+.box7-2>div {position: absolute;}
 .box7-2 .txtBox {
    width: 45%;
    text-align: right;
+   left: -100%;
+   top: 20%;
 }
 .box7-2 .txtBox h2 {
    font-size: 32px;
@@ -900,6 +900,8 @@ body {font-family: 'Goldman', sans-serif;}
 .box7-2 .imgBox {
    text-align: center;
    width: 55%;
+   right: -100%;
+   top: 5%;
 }
 .box7-2 .imgBox img {
    width: 516px;

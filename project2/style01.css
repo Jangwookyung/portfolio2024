@@ -27,8 +27,9 @@ body {font-family: 'Goldman', sans-serif;}
            z-index: 100;}
 
 .popUpBox p {}
-.popUpBox nav i {font-size: 22px;
-                 padding-left: 18px;}
+.popUpBox nav .fa-times-circle-o {font-size: 22px;
+                                   float: right;
+                                   padding-right: 30px;}
 
 .popUpBox nav i:hover {cursor: pointer;
                        color: #999;}
@@ -51,8 +52,10 @@ body {font-family: 'Goldman', sans-serif;}
 
 .popUpBox .snsSet {display: flex;
                    text-align: center;
-                   padding-top: 150px;}
+                   padding-top: 150px;
+                   padding-left: 10px;}
 .popUpBox .snsSet li {padding: 0 17px;}
+.popUpBox .snsSet li a {padding-left: 15px;}
 .popUpBox .snsSet i {font-size: 20px;
                      color: #888;}
 
@@ -325,19 +328,37 @@ video {height: 100%;
           align-items: flex-start;
           font-family: 'Inter', sans-serif;}
 .box5 li {width: 45%;
-          margin: 0 50px;
-          height: 650px;}
+          margin: 0 50px; 
+          height: 650px;
+          position: relative;}
 .box5 li img {width: 100%;
               height: 500px;}
-.box5 li p {font-size: 28px;
-            letter-spacing: 5%;
-            color: #f0f0f0;
-            margin-top: 70px;
-            padding-left: 30px;
-            border-left: #A50034 solid 18px;}
+.box5 li .txtBox {position: absolute;
+                  background-color: rgba(40, 40, 40, 0.8);
+                  width: calc(100% - 40px);
+                  padding: 10px 20px;
+                  opacity: 0;
+                  left: 0;
+                  bottom: 23%;
+                  transition: all 0.5s;}
+.box5 li span {font-size: 28px;
+               letter-spacing: 5%;
+               color: #f0f0f0;
+               font-weight: bold;
+               padding-left: 30px;
+               border-left: #A50034 solid 18px;}
 .box5 li em {font-style: normal;
              font-size: 18px;
              letter-spacing: 3%;}
+.box5 li .txtBox p {font-size: 20px;
+                    color: #f0f0f0;
+                    letter-spacing: 15%;
+                    line-height: 1.5;
+                    margin-top: 20px;
+                    margin-left: 50px;}
+
+.box5 li:hover .txtBox {opacity: 1;}
+
 
 
 

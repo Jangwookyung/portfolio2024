@@ -142,8 +142,8 @@ $(function(){
 
         price.text(allprice.toLocaleString()+'원')
         
-            cNum.val(cnt);
-            
+        
+        cNum.val(cnt);
         }
 
         
@@ -157,7 +157,10 @@ $(function(){
     $('.buyBox .cartbtn').click(function(){
         if(confirm('장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')){
             alert("장바구니로 이동합니다.");
+        }
+        else{
             $('.box1-inner li .new').css({'display':'block'})
+            
         }
     })
 
@@ -185,5 +188,32 @@ $(function(){
         $('.box2 .mainImg li').eq(i).fadeIn()
 
     })
+
+
+
+
+    // 스크롤했을때 
+    window.addEventListener('scroll', function(){
+        console.log(window.scrollY)
     
+        if(window.scrollY > 2750){
+            $('.box7-1 .imgBox').stop().animate({'left':'0%'},1200)
+            $('.box7-1 .txtBox').stop().animate({'right':'0%'},1200)
+        }
+        else {
+            
+            $('.box7-1 .imgBox').stop().animate({'left':'-100%'},800)
+            $('.box7-1 .txtBox').stop().animate({'right':'-100%'},800)
+        }
+
+        if(window.scrollY > 3150){
+            $('.box7-2 .txtBox').stop().animate({'left':'0%'},1200)
+            $('.box7-2 .imgBox').stop().animate({'right':'0%'},1200)
+        }
+        else {
+            
+            $('.box7-2 .txtBox').stop().animate({'left':'-100%'},800)
+            $('.box7-2 .imgBox').stop().animate({'right':'-100%'},800)
+        }
+    })
 })

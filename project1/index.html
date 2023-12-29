@@ -8,8 +8,7 @@
 
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="style.css">
-    <!-- 제이쿼리 CDN -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
     <!-- 외부스크립트연결 -->
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/js.js"></script>
@@ -55,9 +54,11 @@
     </header>
     <div class="box2">
         <div class="slide">
-            <img src="img/museum-slide1.jpg" alt="">
-            <img src="img/museum-slide2.jpg" alt="">
-            <img src="img/museum-slide3.jpg" alt="">
+            <ul>
+                <li><img src="img/museum-slide1.jpg" alt=""></li>
+                <li><img src="img/museum-slide2.jpg" alt=""></li>
+                <li><img src="img/museum-slide3.jpg" alt=""></li>
+            </ul>
         </div>
         <div class="txtBox">
             <h2>대전선사박물관</h2>
@@ -73,7 +74,7 @@
         <div class="box3-2">
             <div class="titleBox">
                 <ul>
-                    <li>개인</li>
+                    <li class="on">개인</li>
                     <li>단체</li>
                     <li>교육프로그램</li>
                 </ul>
@@ -361,45 +362,45 @@
             <div class="imgBox">
                 <img src="img/issue-img.png" alt="">
             </div>
-            <div class="box7-1" style="display: block;">
-                <div class="titleBox">대전의 구석기 시대 유적</div>
-                <div class="listBox">
+            <ul class="box7-1 on">
+                <li class="titleBox">대전의 구석기 시대 유적</li>
+                <li class="listBox">
                     <div class="issue">
                         <h3>구즉동 유적(九則洞 遺蹟)</h3>
                         <p>오봉산 남쪽 자락의 구즉마을에 있습니다. 구릉성 산지에 자리하였는데, 지금부터 약 15,000년전에 사람들이 살았던 것으로 드러났습니다.</p>
                     </div>
-                </div>
-            </div>
-            <div class="box7-2">
-                <div class="titleBox">대전의 신석기 시대 유적</div>
-                <div class="listBox">
+                </li>
+            </ul>
+            <ul class="box7-2">
+                <li class="titleBox">대전의 신석기 시대 유적</li>
+                <li class="listBox">
                     <div class="issue">
                         <h3>둔산동 유적(屯山洞 遺蹟)</h3>
                         <p>갑천가 넓은 들판에 솟아있는 낮은 구릉의 북쪽경사면에 위치하고 있는데, 1991년 둔산신시가지를 개발할 때 발굴조사를 통해 유적이 확인되었습니다.</p>
                     </div>
-                </div>
-            </div>
-            <div class="box7-3">
-                <div class="titleBox">대전의 청동기 시대 유적</div>
-                <div class="listBox">
+                </li>
+            </ul>
+            <ul class="box7-3">
+                <li class="titleBox">대전의 청동기 시대 유적</li>
+                <li class="listBox">
                     <div class="issue">
                         <h3>괴정동 유적(槐亭洞 遺蹟)</h3>
                         <p>1967년 마을 주민이 밭을 갈다가 우연히 발견한 유적으로 국립박물관의 수습조사를 통해 세상에 알려지게 되었습니다.</p>
                     </div>
-                </div>
-            </div>
-            <div class="box7-4">
-                <div class="titleBox">대전의 초기철기시대 유적</div>
-                <div class="listBox">
+                </li>
+            </ul>
+            <ul class="box7-4">
+                <li class="titleBox">대전의 초기철기시대 유적</li>
+                <li class="listBox">
                     <div class="issue">
                         <h3>자운동 · 추목동 유적</h3>
                         <p>충남대학교 정문 서쪽언덕에서 남으로 벋은 능선에 자리하고 있습니다. 1994년 충남대학교 박물관이 조사하여 약 8개가량의 유적이 확인되었습니다.</p>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
-        <p class="top" onclick="content('prev')">&#9650;</p>
-        <p class="bottom" onclick="content('next')">&#9660;</p>
+        <p class="top">&#9650;</p>
+        <p class="bottom">&#9660;</p>
     </div>
     <div class="box8">
         <div class="title">

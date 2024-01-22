@@ -4,32 +4,292 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>장우경 의 포트폴리오</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/favicon3.png"> <!-- Android -->
+    <link rel="apple-touch-icon" href="img/favicon3.png"> <!-- iOS -->
+    <title>Jang Woo Kyung</title>
 
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="style.css">
-<!-- 외부스크립트연결 -->
-<script src="js/jquery-2.1.1.min.js"></script>
-<script src="js/js.js"></script>
+    <!-- 외부스크립트연결 -->
+    <script script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/js.js"></script>
+
+    <!-- 폰트어썸 연결 -->
+    <script src="https://kit.fontawesome.com/dc9b491e4c.js" crossorigin="anonymous"></script>
 </head>
+
+
 <body>
+
+    <!-- 마우스 커서 -->
+    <div class="cursor"><img src="img/cursor.png" alt=""></div>
+
+
+    <!-- 로고 & 메뉴 -->
     <header>
-        <!-- 본인을나타낼수 있는로고 -->
+        <p><a href="index.html"><img src="img/logo.png" alt=""></a></p>
         <nav>
             <ul>
-                <li><a href="#">프로필</a></li>
-                <li><a href="#">프로젝트1</a></li>
-                <li><a href="#">프로젝트2</a></li>
-                <li><a href="#">프로젝트3</a></li>
+                <li><a href="#">MAIN</a><div class="hov1"></div></li>
+                <li><a href="#">PROFILE</a><div class="hov2"></div></li>
+                <li><a href="#">PROJECTS</a><div class="hov3"></div></li>
             </ul>
         </nav>
     </header>
 
-    <section></section>
+
+    <!-- 인트로 화면 -->
+    <div class="intro">
+        <div class="wrapper">
+            <div class="typing-demo">
+                Welcome to My Page!<img src="img/logo.png" alt="" width="100px" height="100px">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 메인 화면 -->
+    <section class="main">
+        <article class="main-inner">
+            <div class="titBox">
+                <h2>Hello! Welcome To My</h2>
+                <ul class="title">
+                    <li><img src="img/p.png" alt=""></li>
+                    <li><img src="img/or.png" alt=""></li>
+                    <li><img src="img/t.png" alt=""></li>
+                    <li><img src="img/fol.png" alt=""></li>
+                    <li><img src="img/i.png" alt=""></li>
+                    <li><img src="img/o.png" alt=""></li>
+                </ul>
+            </div>
+            <!-- 뒷 배경 설정 -->
+            <ul class="back">
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li><img src="img/main-backball.png" alt=""></li>
+            </ul>
+        </article>
+    </section>
+
+
+    <!-- 프로필 설정 -->
+    <section class="profile">
+        <div class="profile-inner">
+        
+        <!-- 프로필 배경 공 -->
+            <ul class="back">
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li><img src="img/main-backball.png" alt=""></li>
+            </ul>
+        
+            <!-- 프로필 왼쪽 칸 -->
+            <article class="prof-left">
+                <!-- 프로필 사진 -->
+                <ul class="imgBox">
+                    <li>
+                        <div class="front"><img src="img/profile.png" alt="" ></div>
+                        <div class="back"><img src="img/profile2.png" alt="" ></div>
+                    </li>
+                </ul>
+                <!-- 프로필 문구 -->
+                <div class="txtBox">
+                    <p>끊임없는 <b>성장</b>과 <b>발전</b>을<br>
+                    추구하는 디자이너입니다.</p>
+                </div>
+                <div class="about">
+                    <ul>
+                        <li>
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            Jang Woo Kyung / <span>장우경</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                            2000 (만 23세)
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            wkddnrud0690@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </article>
     
-<footer>
-    <!-- 저작권내용을 담습니다. -->
-</footer>
+            <!-- 프로필 오른쪽 칸 -->
+            <article class="prof-right">
+                <div class="prof-inner">
+
+                    <!-- 학력 -->
+                    <div class="edu">
+                        <h2>Education</h2>
+                        <ul>
+                            <li><span>2018</span>대전둔산여자고등학교 졸업</li>
+                            <li><span>2019</span>한국방송통신대학교 입학</li>
+                            <li class="now"><span>2024</span>NCS 과정 수료</li>
+                        </ul>
+                        <img src="img/line.png" alt="">
+                    </div>
+
+                    <!-- 스킬 -->
+                    <div class="skill">
+                        <h2>Program Skill</h2>
+                        <!-- 원형 차트 -->
+                        <div class="chart">
+                            <div class="skill-chart1">
+                                <svg width="100" height="100" fill="none" stroke-linecap="round">
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#00C9FD" stroke-width="10"></circle>
+                                </svg>
+                                <img src="img/skill1.png" alt="">
+                                <p>Photoshop</p>
+                            </div>
+                            <div class="skill-chart2">
+                                <svg width="100" height="100" fill="none" stroke-linecap="round">
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#A259FF" stroke-width="10"></circle>
+                                </svg>
+                                <img src="img/skill2.png" alt="">
+                                <p>Figma</p>
+                            </div>
+                            <div class="skill-chart3">
+                                <svg width="100" height="100" fill="none" stroke-linecap="round">
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#FF5C33" stroke-width="10"></circle>
+                                </svg>
+                                <img src="img/skill3.png" alt="">
+                                <p>Html</p>
+                            </div>
+                            <div class="skill-chart4">
+                                <svg width="100" height="100" fill="none" stroke-linecap="round">
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#007DB7" stroke-width="10"></circle>
+                                </svg>
+                                <img src="img/skill4.png" alt="">
+                                <p>Css</p>
+                            </div>
+                            <div class="skill-chart5">
+                                <svg width="100" height="100" fill="none" stroke-linecap="round">
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#FB9C28" stroke-width="10"></circle>
+                                </svg>
+                                <img src="img/skill5.png" alt="">
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 성격 -->
+                    <div class="prsnl">
+                        <h2>Personality</h2>
+                        <p>MBTI : 논리적인 사색가, 논리술사 (INTP)</p>
+                        <img src="img/personality.png" alt="">
+                    </div>
+
+                    <!-- 키워드 -->
+                    <div class="keywd">
+                        <h2>Keywords</h2>
+                        <ul>
+                            <li><span>감각적인</span></li>
+                            <li><span>창의성</span></li>
+                            <li><span>예술</span></li>
+                            <li><span>공감</span></li>
+                            <li><span>완벽주의</span></li>
+                            <li><span>세심함</span></li>
+                            <li><span>객관적인</span></li>
+                            <li><span>융통성</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- 프로젝트 칸 설정 -->
+    <section class="project">
+        <div class="project-inner">
+            
+            <!-- 뒷 배경 공 설정 -->
+            <ul class="back">
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li><img src="img/main-backball.png" alt=""></li>
+                <li class="me"><img src="img/charactor.png" alt=""></li>
+            </ul>
+    
+            <!-- 프로젝트 첫번째 칸 -->
+            <article class="project-1">
+                <div class="imgBox">
+                    <img src="img/mockup1.png" alt="">
+                </div>
+                <h2>대전선사박물관</h2>
+                <p>[ #리뉴얼사이트 #레이아웃구성 #탭바 ]</p>
+                <ul>
+                    <li class="btn"><a href="#">Concept View</a></li>
+                    <li><a href="project001/index.html" target="_blank">Page link</li></a>
+                </ul>
+            </article>
+    
+            <!-- 프로젝트 두번째 칸 -->
+            <article class="project-2">
+                <div class="imgBox">
+                    <img src="img/mockup2.png" alt="">
+                </div>
+                <h2>파나소닉 카메라</h2>
+                <p>[ #텍스트애니메이션 #서브페이지 ]</p>
+                <ul>
+                    <li class="btn"><a href="#">Concept View</a></li>
+                    <li><a href="project002/index.html" target="_blank">Page link</li></a>
+                </ul>
+            </article>
+    
+            <!-- 프로젝트 세번째 칸 -->
+            <article class="project-3">
+                <div class="imgBox">
+                    <img src="img/mockup3.png" alt="">
+                </div>
+                <h2>도경수</h2>
+                <p>[ #스크롤슬라이드 #팝업 #가로스크롤 ]</p>
+                <ul>
+                    <li class="btn"><a href="#">Concept View</a></li>
+                    <li><a href="project003/index.html" target="_blank">Page link</a></li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- 컨셉뷰 팝업 -->
+    <div class="concept">
+        <!-- 닫기 버튼 -->
+        <span><i class="fa fa-times" aria-hidden="true"></i></span>
+        <!-- 팝업창 -->
+        <ul class="popup">
+            <li class="concept-0">
+                <img src="img/concept_view1.png" alt="">
+            </li>
+            <li class="concept-1">
+                <img src="img/concept_view2.png" alt="">
+            </li>
+            <li class="concept-2">
+                <img src="img/concept_view3.png" alt="">
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 푸터 아이콘 설정 -->
+    <footer>
+        <p><i class="fa fa-info-circle" aria-hidden="true"></i></p>
+        <div>
+            <span>
+                본 사이트는 포트폴리오용 제작 사이트입니다.
+                Copyright ⓒ Jangwookyung. 2024. All Rights Reserved.
+            </span>
+        </div>
+    </footer>
     
 </body>
 </html>

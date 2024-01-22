@@ -1,0 +1,384 @@
+/* 언어설정 */
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+body {
+    font-family: 'Libre Caslon Text', serif;
+}
+
+
+
+
+/* 브라우저 설정 */
+.browser {
+    position: fixed;
+    left: 37%;
+    bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    background-color: #000D14;
+    padding: 10px;
+    z-index: 200;
+    animation: infoOpacity 5s;
+    opacity: 0;
+    pointer-events: none;
+}
+@keyframes infoOpacity {
+    0% {opacity: 0.8;}
+    75% {opacity: 0.8;}
+    100% {opacity: 0;}
+  }
+
+
+
+
+
+
+/* main 고정 메뉴 설정####################### */
+header nav {
+    position: fixed;
+    right: 25px;
+    bottom: 50px;
+    z-index: 999;
+}
+header nav ul {}
+header nav ul li {
+    margin-bottom: 35px;
+    text-align: right;
+}
+header nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    padding-right: 10px;
+    border-right: #fff solid 5px;
+}
+header nav ul li:last-child {
+    margin-bottom: 0px;
+}
+header nav ul li:hover a{
+    cursor: pointer;
+    color: #00754A;
+    border-right: #00754A solid 5px;
+}
+
+
+
+
+
+
+/* 필모그래피 설정 */
+.filmography {
+    width: 100%;
+    height: 100vh;
+    background-color: #BFA6A2;
+}
+
+/* top 설정 ############### */
+.filmography .top {
+    width: 100%;
+    height: 68px;
+}
+.filmography .top h3 {
+    text-align: center;
+    padding-top: 32px;
+    font-size: 28px;
+    color: #57423F;
+}
+.filmography .top a {
+    position: absolute;
+    left: 32px;
+    top: 27px;
+}
+.filmography .top i {
+    color: #fff;
+    font-size: 15px;
+    padding: 12px 13px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    animation: pulse 2s infinite alternate;
+}
+.filmography .top a:hover i {
+    color: #57423F;
+    border: solid 1px #57423F;
+}
+
+/* top 애니메이션 */
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.2, 1.2, 1.2);
+      transform: scale3d(1.2, 1.2, 1.2);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+/* 타임라인 설정######################*/
+.filmography .timeline {
+    width: 90%;
+    height: 90%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* 연도 설정 */
+.timeline .year {
+    width: 221%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 10px solid #6C2D27;
+}
+.timeline .year p {
+    font-size: 20px;
+    color: #fff;
+    width: 285px;
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+}
+.timeline .year .wid {
+    width: 570px;
+    text-align: center;
+}
+
+
+/* 포스터 설정######################*/
+.filmo {
+    width: 221%;
+    height: calc(100% - 70px);
+}
+.filmo>div {
+    display: flex;
+    justify-content: flex-start;
+    width: 285px;
+    height: 100%;
+    float: left;
+}
+
+/* 전체 포스터 이미지 설정 */
+.filmo>div img {
+    width: 166px;
+    height: 235px;
+    margin-bottom: 20px;
+}
+
+/* 전체 영화 글씨 설정 */
+.filmo>div .film .icon {
+    text-align: left;
+    font-size: 18px;
+    color: #6C2D27;
+    margin-bottom: 5px;
+    
+}
+/* 전체 드라마 글씨 설정 */
+.filmo>div .tv .icon {
+    text-align: left;
+    font-size: 18px;
+    color: #004E4F;
+    margin-bottom: 5px;
+}
+/* 전체 아이콘 설정 */
+.filmo>div i {
+    margin-right: 10px;
+}
+/* 전체 영화타이틀 설정 */
+.filmo>div h4 {
+    color: #57423F;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.filmo>div p {
+    color: #555;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+}
+.filmo>div strong {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px;
+}
+.filmo>div em {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    color: #004E4F;
+}
+.filmo>div span {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    color: #6C2D27;
+}
+
+
+
+
+
+
+/* 연도별 설정############################### */
+/* 2014설정 */
+.filmo .Y2014 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px #89726E;
+    text-align: center;
+}
+
+/* 2015설정 */
+.filmo .Y2015 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px #89726E;
+    text-align: center;
+}
+
+/* 2016설정 */
+.filmo .Y2016 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px #89726E;
+    text-align: center;
+}
+
+/* 2017설정 */
+.filmo .Y2017 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px #89726E;
+    text-align: center;
+}
+
+/* 2018설정 */
+.filmo .Y2018 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px #89726E;
+    flex-wrap: wrap;
+    width: 570px;
+    text-align: center;
+}
+
+/* 2019설정 */
+.filmo .Y2019 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px #89726E;
+    text-align: center;
+}
+
+/* 2022설정 */
+.filmo .Y2022 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px #89726E;
+    text-align: center;
+}
+
+/* 2023설정 */
+.filmo .Y2023 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px #89726E;
+}
+/* 예정작 설정 */
+.filmo .Ynon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px #89726E;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 미디어쿼리 구간##########################################################*/
+@media (min-width:1500px){
+    
+    section {
+        width: 1440px;
+        margin: 0 auto;
+    }
+
+    .filmography .timeline {
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    /* 연도 설정 */
+    .timeline .year {
+        width: 166%;
+    }
+    /* 포스터 설정######################*/
+    .filmo {
+        width: 168%;
+    }
+
+    /* 전체 포스터 이미지 설정 */
+    .filmo>div img {
+        margin-bottom: 15px;
+    }
+    /* 전체 영화타이틀 설정 */
+    .filmo>div h4 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+}

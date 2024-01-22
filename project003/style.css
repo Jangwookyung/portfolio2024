@@ -1,0 +1,1462 @@
+/* 언어설정 */
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+body {
+    font-family: 'Libre Caslon Text', serif;
+}
+
+
+
+
+/* 브라우저 설정 */
+.browser {
+    position: fixed;
+    left: 37%;
+    bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    background-color: #000D14;
+    padding: 10px;
+    z-index: 200;
+    animation: infoOpacity 5s;
+    opacity: 0;
+    pointer-events: none;
+}
+@keyframes infoOpacity {
+    0% {opacity: 0.8;}
+    75% {opacity: 0.8;}
+    100% {opacity: 0;}
+  }
+
+/* main 설정 ######################################################################*/
+main {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/main-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+}
+
+main .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/* main 타이틀 설정################### */
+main .txtBox {
+    position: absolute;
+    left: 25px;
+    top: 0;
+    z-index: 1;
+}
+main .txtBox p {
+    font-weight: bold;
+    font-size: 180px;
+    color: #016241;
+    letter-spacing: -5%;
+}
+main .txtBox .d {
+    font-size: 250px;
+    color: #00754A;
+    letter-spacing: 0%;
+    margin-bottom: -70px;
+    animation: fadeInLeft 0.8s forwards;
+}
+main .txtBox .k{
+    margin-bottom: -20px;
+    letter-spacing: -7%;
+    animation: fadeInLeft 1.3s forwards;
+}
+main .txtBox .s {
+    animation: fadeInLeft 1.5s forwards;
+}
+
+/*  */
+main .txtBox .d.on {
+    animation: fadeInLeft 0.8s forwards;
+}
+main .txtBox .k.on {
+    animation: fadeInLeft 1.3s forwards;
+}
+main .txtBox .s.on {
+    animation: fadeInLeft 1.5s forwards;
+}
+
+/* main 타이틀 애니메이션 */
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+/* main 이미지 설정##################### */
+main .imgBox {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 10;
+}
+main .imgBox img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* main 고정 메뉴 설정####################### */
+main nav {
+    position: fixed;
+    right: 25px;
+    bottom: 50px;
+    z-index: 999;
+}
+main nav ul {}
+main nav ul li {
+    margin-bottom: 35px;
+    text-align: right;
+    padding-right: 10px;
+    border-right: #fff solid 5px;
+    color: #fff;
+    font-size: 20px;
+}
+main nav ul li:last-child {
+    margin-bottom: 0px;
+}
+main nav ul li.on {
+    color: #00754A;
+    border-right: #00754A solid 5px;
+}
+main nav ul li:hover{
+    cursor: pointer;
+}
+
+/* 마우스 스크롤 인터렉션 */
+main .mouse {
+    position: absolute;
+    left: 40px;
+    bottom: 250px;
+    width: 30px;
+    height: 60px;
+    border: 2px solid #208E69;
+    border-radius: 30px;
+    animation: fadeIn 2s forwards
+}
+main .mouse .circle {
+    width: 9px;
+    height: 9px;
+    background-color: #208E69;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+    animation: backOutDown 3s infinite;
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+@keyframes backOutDown {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    20% {
+      -webkit-transform: translateY(0px) scale(0.9);
+      transform: translateY(0px) scale(0.9);
+      opacity: 0.7;
+    }
+  
+    100% {
+      -webkit-transform: translateY(30px) scale(0.9);
+      transform: translateY(30px) scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+
+
+
+
+
+/* profile 설정######################################################################## */
+.profile {
+    width: 100%;
+    height: 100vh;
+    background-color: #6C2D27;
+    overflow: hidden;
+}
+
+.profile article {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.profile .prof {}
+
+
+/* profile 타이틀 설정#################### */
+.profile .prof .title {
+    padding-top: 55px;
+}
+.profile .prof .title p {
+    font-size: 150px;
+    color: #016241;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* profile 메인이미지 설정################# */
+.profile .mainImg {
+    position: absolute;
+    left: 50%;
+    margin-left: -293px;
+    top: 50%;
+    margin-top: calc(-695px/2);
+}
+.profile .mainImg li {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.profile .mainImg img {
+    width: 586px;
+    height: 695px;
+}
+.profile .mainImg li.on {
+    display: block;
+}
+
+/* profile 이미지 뒤에 선 설정############## */
+.profile .line {
+    margin-top: 270px;
+    height: 1px;
+    border: none;
+    background: #A8AE9C;
+}
+
+/* profile 작은 이미지 설정################# */
+.profile .imgBox img:nth-child(1) {
+    width: 250px;
+    height: 125px;
+    position: absolute;
+    left: 280px;
+    top: 315px;
+}
+.profile .imgBox img:nth-child(2) {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: 450px;
+    bottom: 60px;
+}
+
+
+/* profile 메뉴 설정######################### */
+.profile .txtBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile .txtBox div:nth-child(1) {
+    margin-top: 20px;
+    margin-left: 110px;
+}
+.profile .txtBox div:nth-child(2){
+    margin-top: -110px;
+    margin-right: 135px;
+}
+.profile .txtBox p {
+    font-size: 28px;
+    color: #A8AE9C;
+    animation: pulse 2s infinite alternate;
+}
+
+.profile .txtBox a {
+    font-size: 28px;
+    color: #A8AE9C;
+}
+
+.profile .txtBox p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* 프로필메뉴 애니메이션 */
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+}
+
+
+
+
+
+
+/* profile 팝업 설정######################## */
+.profile .popup {
+    background-color: #BFA6A2;
+    width: 760px;
+    height: 880px;
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    display: none;
+}
+
+/* 팝업 닫기버튼 설정 */
+.profile .popup .close {
+    position: absolute;
+    right: 10px;
+    top: -5px;
+}
+.profile .popup .close i {
+    font-size: 24px;
+    color: #57423F;
+}
+.profile .popup .close:hover i {
+    color: #89726E;
+    cursor: pointer;
+}
+
+/* 팝업 sns 탭 설정 */
+.profile .popup .sns {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    z-index: 21;
+    transition: all 0.8s;
+    animation: swing 1s infinite alternate;
+}
+.profile .popup .sns a {
+    color: #016241;
+    font-size: 22px;
+    background-color: #D8E5C8;
+    padding: 5px 9px;
+}
+.profile .popup .sns:hover {
+    animation: none;
+    transform: skew(-10deg, 10deg);
+}
+
+/* 팝업 인스타 애니메이션 */
+@keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+  
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+  
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+  
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+  
+    to {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+  }
+
+
+/* 팝업 title 설정 */
+.profile .popup .title {
+    color: #6C2D27;
+    font-size: 150px;
+    width: 345px;
+    height: 160px;
+    padding: 0;
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    z-index: 21;
+}
+
+/* 팝업 이미지 설정 */
+.profile .popup .backImg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+    width: 743px;
+    height: 828px;
+}
+.profile .popup .backImg img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 팝업 텍스트 설정 */
+.profile .popup .txtBox {
+    z-index: 21;
+    position: absolute;
+    right: 35px;
+    bottom: 25px;
+}
+.profile .popup .txtBox ul {}
+.profile .popup .txtBox li {
+    text-align: right;
+    font-size: 22px;
+    color: #004E4F;
+    line-height: 2;
+}
+.profile .popup .txtBox li:hover {
+    font-weight: bold;
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* profile 배경 별무늬 설정################ */
+.profile .star{
+    width: 800px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 135px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile .star li {
+    width: 65px;
+    height: 90px;
+    position: absolute;
+}
+.profile .star li:nth-child(1) {
+    right: 8%;
+    top: 32%;
+}
+.profile .star li:nth-child(2) {
+    right: 23%;
+    bottom: 23%;
+}
+.profile .star li:nth-child(3) {
+    left: 23%;
+    bottom: 23%;
+}
+.profile .star img {
+    width: 100%;
+    height: 100%;
+    animation: flip 3s infinite alternate;
+}
+
+.profile .star li:hover img{
+    cursor: pointer;
+    animation: none;
+}
+
+/* 별 애니메이션 */
+@keyframes flip {
+    from {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  
+    40% {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  
+    50% {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    80% {
+      -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    to {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  }
+
+
+
+
+
+/* gallery 설정################################################################### */
+.gallery {
+    width: 100%;
+    height: 100vh;
+    background-color: #89726E;
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+.gallery article {
+    width: 1230px;
+    height: 815px;
+    position: relative;
+}
+
+
+
+/* gallery 기대탭 사진 설정####################### */
+.gallery .photo1 {
+    width: 100%;
+    height: 100%;
+}
+.gallery article>div {
+    position: absolute;
+    left: 50px;
+    top: 77px;
+    perspective: 1500px;
+}
+.gallery article>div p {
+    float: left;
+    height: 50%;
+    width: 30%;
+    transition: all 1s;
+    transform: rotateY(0deg);
+    opacity: 0;
+}
+.gallery article>div.on p {
+    transform: rotateY(360deg);
+    opacity: 1;
+}
+.gallery .photo1 p:nth-child(1) {
+    background-color: palegoldenrod;
+    width: 30%;
+}
+.gallery .photo1 p:nth-child(2) {
+    background-color: paleturquoise;
+    width: 70%;
+}
+.gallery .photo1 p:nth-child(3) {
+    background-color: palegreen;
+    width: 30%;
+}
+.gallery .photo1 p:nth-child(4) {
+    background-color: palevioletred;
+    width: 40%;
+}
+.gallery .photo1 p:nth-child(5) {
+    background-color: papayawhip;
+    width: 30%;
+}
+
+.gallery .photo1 p img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* gallery 공감탭 사진 설정####################### */
+.gallery .photo2 {
+    width: 100%;
+    height: 100%;
+}
+/* .gallery .photo2 .imgBox {
+    background-color: #A8AE9C;
+    position: absolute;
+    width: 1230px;
+    height: 815px;
+    left: 50px;
+    top: 77px;
+}
+.gallery .photo2 .imgBox p {
+    float: right;
+    height: 50%;
+    width: 30%;
+    transform: rotateY(0deg);
+}
+.gallery .photo2 .imgBox.on p {
+    transform: rotateY(360deg);
+} */
+.gallery .photo2 p:nth-child(1) {
+    background-color: palegoldenrod;
+    width: 30%;
+    height: 100%;
+}
+.gallery .photo2 p:nth-child(2) {
+    background-color: paleturquoise;
+    width: 40%;
+    height: 40%;
+}
+.gallery .photo2 p:nth-child(3) {
+    background-color: palegreen;
+    width: 30%;
+    height: 40%;
+}
+.gallery .photo2 p:nth-child(4) {
+    background-color: palevioletred;
+    width: 20%;
+    height: 60%;
+}
+.gallery .photo2 p:nth-child(5) {
+    background-color: papayawhip;
+    width: 30%;
+    height: 60%;
+}
+.gallery .photo2 p:nth-child(6) {
+    background-color: peachpuff;
+    width: 20%;
+    height: 60%;
+}
+
+
+.gallery .photo2 p img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+/* gallery 아래 탭 설정###################### */
+.gallery .txtBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.gallery .txtBox p {
+    margin-left: 50px;
+    margin-bottom: 45px;
+    font-size: 32px;
+    padding: 7px 25px;
+    color: #57423F;
+    transition: all 0.8s;
+    font-weight: bold;
+}
+.gallery .txtBox p:hover {
+    cursor: pointer;
+}
+.gallery .txtBox .album01.on {
+    background-color: #6C2D27;
+    color: #fff;
+}
+.gallery .txtBox .album02.on {
+    background-color: #004E4F;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* music 설정 ############################################################################*/
+.music {
+    background-color: #BFA6A2;
+    width: 100%;
+    height: 100vh;
+}
+.music article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.music .leftBox {
+    width: 57%;
+    height: 100%;
+}
+.music .rightBox {
+    width: 43%;
+    height: 100%;
+}
+
+/* music 영상 박스 설정 ######################## */
+.music .ytb {
+    width: 740px;
+    height: 530px;
+    padding-top: 70px;
+    margin-left: 70px;
+    font-family: 'Inter', sans-serif;
+}
+.music .ytb .vid {
+    background-color: #57423F;
+    width: 100%;
+    height: 460px;
+    border-radius: 10px;
+}
+.music .ytb .vid iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.music .ytb .title {
+    color: #6C2D27;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+
+/* music 왼쪽아래 설명란 설정 ######################## */
+.music .info {
+    font-family: 'Inter', sans-serif;
+    width: 740px;
+    height: 370px;
+    margin-left: 70px;
+    margin-top: 5px;
+}
+.music .info .vidprof {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.music .info .vidprof img {
+    width: 60px;
+    height: 60px;
+}
+.music .info .vidprof p {
+    font-size: 20px;
+    color: #57423F;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.music .info .vidprof span {
+    font-weight: normal;
+}
+.music .info .vidprof i {
+    background-color: #89726E;
+    font-size: 22px;
+    padding: 5px 7px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 25px;
+    color: #810061;
+}
+.music .info .vidprof a:hover i {
+    animation: none;
+    color: #c13584;
+}
+
+.music .info .vidprof i {
+    animation: heartBeat 3s infinite alternate;
+}
+
+/* 인스타아이콘 애니메이션 */
+@keyframes heartBeat {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+  
+    14% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+  
+    28% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+  
+    42% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+  
+    70% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+  }
+
+/* music 왼쪽아래 설명란 텍스트박스 설정####### */
+.music .info .txtBox {
+    background-color: #89726E;
+    border-radius: 10px;
+    width: calc(100% - 36px);
+    height: 261px;
+    padding: 12px 18px;
+    color: #fff;
+    margin-top: 26px;
+}
+.music .info .txtBox p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.music .info .txtBox .listBox {
+    margin-top: 30px;
+}
+.music .info .txtBox .listBox p {
+    font-size: 12px;
+}
+
+
+/* music 오른쪽 영상 리스트 설정 ####################### */
+.music .vidlist {
+    font-family: 'Inter', sans-serif;
+    width: 405px;
+    height: 450px;
+    margin-left: 50px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.music .vidlist div {}
+.music .vidlist ul a {
+    display: flex;
+}
+.music .vidlist li:nth-child(1) {
+    background-color: #89726E;
+    width: 185px;
+    height: 118px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.music .vidlist li:nth-child(2) {
+    width: 200px;
+    margin-left: 20px;
+}
+.music .vidlist li img {
+    width: 100%;
+    height: 100%;
+}
+.music .vidlist li h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #6C2D27;
+}
+.music .vidlist li p {
+    font-size: 12px;
+    color: #57423F;
+}
+.music .vidlist li span {
+    font-size: 12px;
+    color: #89726E;
+}
+
+.music .vidlist li .time {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 7px;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    border-radius: 5px;
+    transition: all 0.8s;
+}
+
+.music .vidlist ul a:hover .time{
+    opacity: 1;
+}
+
+
+/* music 무드샘플러 설정################## */
+.music .mood {
+    background-color: #57423F;
+    width: 339px;
+    height: 311px;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 22px 33px;
+    position: relative;
+}
+.music .mood h2 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: normal;
+}
+.music .mood ul {
+    margin-top: 11px;
+    width: 100%;
+    height: 274px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.music .mood li {
+    background-color: #89726E;
+    width: 100%;
+    height: 83px;
+}
+.music .mood img {
+    width: 100%;
+    height: 100%;
+}
+.music .mood li:hover img{
+    cursor: pointer;
+
+}
+
+/* 무드샘플러 팝업 설정 */
+.music .mood .moodpop {
+    background-color: #57423F;
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    display: none;
+}
+.music .mood .moodpop .mvid {
+    width: 350px;
+    height: 350px;
+    border-radius: 30px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.music .mood .moodpop .mvid video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+
+
+/* music 노래 재생 탭 설정################# */
+.musictab {
+    background-color: #89726E;
+    width: 456px;
+    height: 950px;
+    border-radius: 30px 30px 0 0;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    padding-top: 20px;
+    position: absolute;
+    right: 145px;
+    bottom: -90%;
+    transition: all 1s;
+}
+.musictab .btnbar {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.musictab .btnbar p {
+    background-color: #f0f0f0;
+    width: 100px;
+    height: 12px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: rubberBand 3s infinite;
+}
+.musictab .btnbar:hover {
+    cursor: pointer;
+}
+.musictab .btnbar:hover p{
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+@keyframes rubberBand {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+
+/* 앨범이름 설정 */
+.musictab .title {
+    margin-top: 42px;
+    text-align: center;
+}
+.musictab .title p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 앨범표지 설정 */
+.musictab .album {
+    width: 355px;
+    height: 355px;
+    margin-top: 33px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.musictab .album img {
+    width: 100%;
+    height: 100%;
+}
+
+.inter {
+    width: 358px;
+    height: 402px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+}
+
+/* 노래제목 설정 */
+.songtit {
+    width: 358px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.songtit .mTit {}
+.songtit .mTit h4 {
+    font-size: 18px;
+}
+.songtit .mTit p {
+    font-size: 16px;
+    color: #BFA6A2;
+    font-weight: bold;
+}
+
+/* 노래제목 아이콘 설정 */
+.inter .icon {}
+.inter .icon ul {
+    display: flex;
+}
+.inter .icon li {
+    background-color: #BFA6A2;
+    border-radius: 50%;
+    text-align: center;
+}
+.inter .icon li:nth-child(2) {
+    margin-left: 15px;
+}
+.inter .icon li i {
+    font-size: 12px;
+    padding: 9px;
+    transition: all 0.8s;
+}
+
+.inter .icon li i:hover {
+    cursor: pointer;
+}
+
+/* 재생바 설정 */
+.inter .playbar {
+    background-color: #BFA6A2;
+    width: 100%;
+    height: 10px;
+    border-radius: 30px;
+    margin-top: 28px;
+}
+.inter .playbar .bar {
+    background-color: #57423F;
+    width: 0%;
+    height: 10px;
+    border-radius: 30px;
+    margin-top: 28px;
+}
+.inter .playbar .time {
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.inter .playbar .time p {
+    color: #BFA6A2;
+    font-size: 10px;
+}
+
+/* 재생 버튼 설정 */
+.inter .playbtn {
+    width: 295px;
+    height: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 64px;
+    position: relative;
+}
+.inter .playbtn ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inter .playbtn i {
+    font-size: 28px;
+}
+.inter .playbtn .fa-play {
+    font-size: 36px;
+}
+.inter .playbtn .fa-pause {
+    font-size: 36px;
+    position: absolute;
+    left: 50%;
+    margin-left: -12px;
+    top: 0;
+}
+
+.inter .playbtn .fa-pause #playp {
+    -webkit-text-fill-color: var(--white);
+    opacity: 0.8;
+}
+
+.inter .playbtn li:hover i {
+    color: #d9d9d9;
+    cursor: pointer;
+}
+
+/* 볼륨 설정 */
+.inter .vol {
+    width: 340px;
+    height: 14px;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inter .vol i {
+    font-size: 14px;
+}
+.inter .vol input {
+    width: 268px;
+    height: 10px;
+    background: linear-gradient(to right, #57423F 0%, #57423F 50%, #BFA6A2 50%, #BFA6A2 100%);
+    border-radius: 30px;
+    border: none;
+    -webkit-appearance: none;
+    accent-color: #57423F;
+}
+.inter .vol input::-webkit-slider-thumb {
+    cursor: pointer;
+}
+
+
+
+
+/* 하단 버튼 설정 */
+.inter .bottom {
+    width: 100%;
+    height: 38px;
+    margin-top: 60px;
+}
+.inter .bottom ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inter .bottom li {
+    padding: 6px 8px;
+    border-radius: 10px;
+    transition: all 0.8s;
+}
+.inter .bottom i {
+    font-size: 25px;
+    color: #fff;
+}
+
+.inter .bottom li:hover {
+    background-color: #BFA6A2;
+    cursor: pointer;
+}
+.inter .bottom li:hover i {
+    color: #57423F;
+}
+
+
+
+
+
+
+/* 푸터 */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+    width: 1000px;
+    height: 40px;
+}
+
+footer p {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    line-height: 0.8;
+    color: #d9d9d9;
+    background-color: #57423F;
+    opacity: 0;
+}
+footer p span {
+    font-weight: bold;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* 미디어쿼리 구간##########################################################*/
+/* 1500px 이상일때 */
+@media (min-width:1500px){
+    header .inner, .profile article, .gallery article, .music article {
+        width: 1440px;
+        margin: 0 auto;
+    }
+
+
+/* 화면 세팅값 수정 */
+
+    /* main 타이틀 설정################### */
+    header .txtBox {
+        left: -10%;
+        top: -3%;
+    }
+    header .txtBox p {
+        font-size: 250px;
+    }
+    header .txtBox .d{
+        font-size: 320px;
+        margin-bottom: -90px;
+    }
+    header .txtBox .k{
+        margin-bottom: -40px;
+    }
+
+    /* main 이미지 설정##################### */
+    header .imgBox {
+        right: -16%;
+        bottom: 0;
+    }
+
+    /* 마우스 스크롤 인터렉션 */
+    main .mouse {
+        bottom: 200px;
+    }
+
+    /* profile 메인이미지 설정################# */
+    .profile .mainImg {
+        margin-left: calc(-526px/2);
+        margin-top: calc(-645px/2);
+    }
+    .profile .mainImg img {
+        width: 526px;
+        height: 645px;
+    }
+
+    /* profile 이미지 뒤에 선 설정############## */
+    .profile .line {
+        width: 4000px;
+        margin-left: -100%;
+    }
+
+    /* profile 메뉴 설정######################### */
+    .profile .txtBox div:nth-child(1) p {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .profile .txtBox div:nth-child(2) p {
+        margin-top: -40px;
+        margin-right: 0;
+    }
+    
+        /* profile 팝업 설정######################## */
+            .profile .popup {
+                left: 0%;
+                bottom: 3%;
+            }
+        
+    /* gallery 기대탭 사진 설정####################### */
+    .gallery article>div {
+        left: -77px;
+        top: 30px;
+    }
+    /* gallery 텍스트박스 설정 */
+    .gallery .txtBox {
+        left: 7%;
+        bottom: -20px;
+    }
+    
+    
+    
+    /* music 영상 박스 설정 ######################## */
+    .music .ytb {
+        padding-top: 50px;
+        margin-left: 0;
+    }
+
+    /* music 왼쪽아래 설명란 설정 ######################## */
+    .music .info {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    /* music 왼쪽아래 설명란 텍스트박스 설정####### */
+    .music .info .txtBox {
+        height: 240px;
+        margin-top: 20px;
+    }
+
+    /* music 오른쪽 영상 리스트 설정 ####################### */
+    .music .vidlist {
+        margin-top: 50px;
+    }
+
+    /* music 무드샘플러 설정################## */
+    .music .mood {
+        margin-top: 30px;
+    }
+    /* 무드샘플러 팝업 설정 */
+    .music .mood .moodpop {
+    left: -100%;
+    top: -30px;
+}
+
+    /* music 노래 재생 탭 설정################# */
+    .musictab {
+        height: 900px;
+        right: 145px;
+        bottom: -92%;
+    }
+
+    /* 재생바 설정 */
+    .inter .playbar .bar {
+        margin-top: 20px;
+    }
+
+    /* 재생 버튼 설정 */
+    .inter .playbtn {
+        margin-top: 44px;
+    }
+
+    /* 볼륨 설정 */
+    .inter .vol {
+        margin-top: 70px;
+    }
+}
+
+

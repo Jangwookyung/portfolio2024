@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>panasonic cart</title>
+
+    <!-- 외부스타일시트 연결 -->
+    <link rel="stylesheet" href="cart.css">
+
+    <!-- 폰트어썸 연결 -->
+    <script src="https://kit.fontawesome.com/dc9b491e4c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="addcart" style="display: none;">
+        <h3>장바구니</h3>
+        <p>장바구니에 담긴 상품은 7일동안 보관됩니다.</p>
+        <ul class="cart-tit">
+            <li class="checkBox">
+                <input type="checkbox" name="check" id="check">
+                전체선택
+            </li>
+            <li>
+                <button>선택 삭제</button>
+                <button>견적서 출력하기</button>
+            </li>
+        </ul>
+        <article>
+            <div class="cart-head">
+                <ul>
+                    <li><input type="checkbox" name="" id=""></li>
+                    <li>이미지</li>
+                    <li>제품</li>
+                    <li>수량</li>
+                    <li>합계</li>
+                </ul>
+            </div>
+            <div class="cart-list">
+                <ul>
+                    <li style="display: none;">
+                        <div class="cart-choose"><input type="checkbox" name="" id=""></div>
+                        <div class="cart-img"></div>
+                        <div class="cart-product"></div>
+                        <div class="cart-input"></div>
+                        <div class="cart-pro-allpri"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart-allprice">
+                <p>결제 예정 금액
+                <span>0,000,000원</span></p>
+            </div>
+        </article>
+        <div class="cart-button">
+            <button class="reset">쇼핑 계속하기</button>
+            <a href="login.html" target="_blank"><button>결제하기</button></a>
+        </div>
+    </section>
+</body>
+</html>

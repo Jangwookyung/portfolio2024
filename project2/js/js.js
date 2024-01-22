@@ -21,13 +21,22 @@ $(function(){
         cm++;
         console.log(cm)
 
-        // var cmwd=$('.inner li').width()
-        // console.log(cmwd)
+        var cmwd=$('.inner li').width()
+        console.log(cmwd)
 
         $('.inner li').eq(cm-1).clone().appendTo('.inner')
-        $('.inner').css({'left':-634.5*cm})
-        $('.inner li').removeClass('on');
-        $('.inner li').eq(cm+1).addClass('on')
+
+        if(window.matchMedia('(min-width: 1290px) and (max-width: 1440px)').matches){
+            $('.inner').css({'left': `calc(-16% + ${-cmwd * cm}px)`})
+            $('.inner li').removeClass('on');
+            $('.inner li').eq(cm+1).addClass('on')
+        }
+        else {
+            $('.inner').css({'left':-cmwd*cm})
+            $('.inner li').removeClass('on');
+            $('.inner li').eq(cm+1).addClass('on')
+        }
+        
 
         })
 

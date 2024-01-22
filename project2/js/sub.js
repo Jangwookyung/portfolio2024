@@ -29,7 +29,7 @@ $(function(){
     var couponBtn = 0;
     $('.list .btn').click(function(){
         couponBtn++
-        if(couponBtn==2)couponBtn==0
+        if(couponBtn==2)couponBtn=0
         if(couponBtn==1){
             $('.list .couponDn').css({'display':'block'})
         }
@@ -123,7 +123,6 @@ $(function(){
         // 음수로 떨어지지 않도록 체크
         if (cnt < 1) {
             cnt = 1;
-        
         }
 
         // 최대 수량 체크 (3개로 설정)
@@ -154,12 +153,45 @@ $(function(){
 
 
     // 장바구니 추가 알림
+    var addnew = 0;
+    var clickCount = 0;
     $('.buyBox .cartbtn').click(function(){
+        addnew++;
+
         if(confirm('장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')){
             alert("장바구니로 이동합니다.");
+            $('.addcart').css({'display':'block'})
+            $('.box1-inner li .new').css({'display':'block'}).text(addnew)
+
+
+            // 클릭 횟수 증가
+            clickCount++;
+
+            // 세 번 이하일 때만 추가
+            if (clickCount <= 3) {
+                $('.addcart').css({'display':'block'})
+        
+                var cartimg = $('.box2 .trailer li').eq(0).html()
+                var cartprod = $('.box2-inner .txtBox .tit').html()
+                var cartpri = $('.allpriceBox .allprice').html()
+                var cartinput = $('.count .btn').html()
+        
+                var newCartItem = '<li>' +
+                    '<div class="cart-choose"><i class="fa fa-check-square" aria-hidden="true"></i></div>' +
+                    '<div class="cart-img">' + cartimg + '</div>' +
+                    '<div class="cart-product">' + cartprod + '</div>' +
+                    '<div class="cart-input">' + cartinput + '</div>' +
+                    '<div class="cart-pro-allpri">' + cartpri + '</div>' +
+                '</li>';
+        
+                $('.addcart .cart-list ul').append(newCartItem);
+        
+            }
+            
         }
+
         else{
-            $('.box1-inner li .new').css({'display':'block'})
+            $('.box1-inner li .new').css({'display':'block'}).text(addnew)
             
         }
     })
@@ -175,6 +207,52 @@ $(function(){
         alert(buy)
     })
 
+
+
+
+
+    
+
+    // 장바구니 아이콘 클릭시 
+    var clickCount = 0;
+    $('.fa-shopping-cart').click(function(){
+
+        // 클릭 횟수 증가
+        clickCount++;
+
+        // 세 번 이하일 때만 추가
+        if (clickCount <= 3) {
+            $('.addcart').css({'display':'block'})
+
+            var cartimg = $('.box2 .trailer li').eq(0).html()
+            var cartprod = $('.box2-inner .txtBox .tit').html()
+            var cartpri = $('.allpriceBox .allprice').html()
+            var cartinput = $('.count .btn').html()
+
+            var newCartItem = '<li>' +
+                '<div class="cart-choose"><i class="fa fa-check-square" aria-hidden="true"></i></div>' +
+                '<div class="cart-img">' + cartimg + '</div>' +
+                '<div class="cart-product">' + cartprod + '</div>' +
+                '<div class="cart-input">' + cartinput + '</div>' +
+                '<div class="cart-pro-allpri">' + cartpri + '</div>' +
+            '</li>';
+
+        $('.addcart .cart-list ul').append(newCartItem);
+
+        }
+
+
+    });
+
+
+
+
+
+
+    // 쇼핑 이어하기
+    $('.addcart .cart-button .reset').click(function(){
+        $('.addcart').css({'display':'none'})
+    })
 
 
 
@@ -197,8 +275,8 @@ $(function(){
         console.log(window.scrollY)
     
         if(window.scrollY > 2750){
-            $('.box7-1 .imgBox').stop().animate({'left':'0%'},1200)
-            $('.box7-1 .txtBox').stop().animate({'right':'0%'},1200)
+            $('.box7-1 .imgBox').stop().animate({'left':'0%'},1000)
+            $('.box7-1 .txtBox').stop().animate({'right':'0%'},1000)
         }
         else {
             
@@ -207,8 +285,8 @@ $(function(){
         }
 
         if(window.scrollY > 3150){
-            $('.box7-2 .txtBox').stop().animate({'left':'0%'},1200)
-            $('.box7-2 .imgBox').stop().animate({'right':'0%'},1200)
+            $('.box7-2 .txtBox').stop().animate({'left':'0%'},1000)
+            $('.box7-2 .imgBox').stop().animate({'right':'0%'},1000)
         }
         else {
             

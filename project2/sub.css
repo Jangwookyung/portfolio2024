@@ -106,6 +106,7 @@ body {font-family: 'Goldman', sans-serif;}
    letter-spacing: 7%;
    font-weight: normal;
    color: #fff;
+   margin-left: 75px;
 }
 .box1-inner ul {
    display: flex;
@@ -340,6 +341,7 @@ body {font-family: 'Goldman', sans-serif;}
    position: relative;
 }
 .formlist .formBox ul {
+   
 }
 .formlist .formBox li {
    font-size: 14px;
@@ -530,7 +532,7 @@ body {font-family: 'Goldman', sans-serif;}
    border: none;
    text-align: center;
    margin: 0;
-   padding: 8px 0 8px 13px;
+   padding: 8px 0 8px 3px;
    width: 50px;
    font-size: 14px;
 }
@@ -569,10 +571,12 @@ body {font-family: 'Goldman', sans-serif;}
    margin-top: 38px;
 }
 .btnBox>div {
-   padding: 19px 80px;
+   padding: 19px;
    border: 1px solid #1a1a1a;
    border-radius: 45px;
    transition: all 0.8s;
+   width: 200px;
+   text-align: center;
 }
 .btnBox .cartbtn {}
 .btnBox .buybtn {
@@ -622,6 +626,7 @@ body {font-family: 'Goldman', sans-serif;}
 /* 이미지 프리뷰 설정 */
 .box2 .trailer {
    width: 75%;
+   height: 100px;
    margin: 0 auto;
 }
 .box2 .trailer ul {
@@ -629,14 +634,17 @@ body {font-family: 'Goldman', sans-serif;}
    display: flex;
    justify-content: space-between;
    align-items: center;
+   width: 100%;
+   height: 100%;
 }
 .box2 .trailer li {
-   width: 100px;
+   text-align: center;
+   width: 24%;
    height: 100px;
 
 }
 .box2 .trailer li img {
-   width: 100%;
+   width: 100px;
    height: 100%;
    border-radius: 20px;
    border: 1px solid #fff;
@@ -646,6 +654,161 @@ body {font-family: 'Goldman', sans-serif;}
    border: #666 1px solid;
    cursor: pointer;
 }
+
+
+
+
+
+
+/* 장바구니 설정############################################## */
+.addcart {
+   position: fixed;
+   background-color: #fff;
+   width: 100%;
+   height: calc(100% - 80px);
+   left: 0;
+   top: 80px;
+   z-index: 99;
+}
+.addcart h3 {
+   text-align: center;
+   font-size: 30px;
+   margin-top: 80px;
+}
+.addcart p {
+   text-align: center;
+   font-size: 15px;
+   color: #666;
+   margin-top: 10px;
+   font-family: 'Inter', sans-serif;
+}
+
+.addcart .cart-tit {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 50px;
+   width: 90%;
+   height: 35px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.addcart .cart-tit li {
+   margin: 0 10px;
+}
+.addcart i {
+   margin-right: 5px;
+}
+
+
+.addcart .cart-tit button {
+   font-size: 16px;
+   font-weight: bold;
+   padding: 5px 30px;
+   background-color: #fff;
+   border: 1px solid #000;
+}
+.addcart .cart-tit button:nth-child(2) {
+   background-color: #1a1a1a;
+   color: #fff;
+}
+
+.addcart article {
+   border-top: 1px solid #1a1a1a;
+   border-bottom: 1px solid #1a1a1a;
+   width: 90%;
+   height: 450px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-top: 10px;
+}
+.addcart .cart-head ul {
+   width: 100%;
+   height: 40px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: #f0f0f0;
+}
+.addcart .cart-head li {
+   font-size: 17px;
+   font-weight: bold;
+   width: 20%;
+   text-align: center;
+}
+
+.addcart .cart-list {
+   width: 100%;
+   height: 100%;
+}
+.addcart .cart-list ul {
+   width: 100%;
+   height: 100%;
+   display: block;
+}
+.addcart .cart-list li {
+   width: 100%;
+   height: 106px; 
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   border-bottom: #ccc solid 1px;
+}
+.addcart .cart-list li>div {
+   width: 20%;
+   text-align: center;
+}
+
+.cart-list .cart-input input{
+   text-align: center;
+   width: 50px;
+}
+
+
+.addcart .cart-allprice {
+   border-top: 1px solid #ccc;
+}
+.addcart .cart-allprice p {
+   text-align: right;
+   font-size: 18px;
+   font-weight: bold;
+   color: #000;
+   margin-right: 20px;
+   margin-bottom: 10px;
+}
+.addcart .cart-allprice span {
+   color: #CC1A2D;
+   display: block;
+   font-size: 32px;
+   font-weight: normal;
+   font-family: 'Goldman', sans-serif;
+}
+.addcart .cart-button {
+   margin-top: 30px;
+   text-align: center;
+}
+.addcart .cart-button button {
+   font-size: 22px;
+   background-color: #fff;
+   width: 250px;
+   height: 60px;
+   text-align: center;
+   margin: 0 5px;
+   border: 1px solid #000;
+}
+.addcart .cart-button button:nth-child(2) {
+   background-color: #1a1a1a;
+   color: #fff;
+}
+.addcart .cart-button button:hover {
+   background-color: #1a1a1a;
+   color: #fff;
+   cursor: pointer;
+}
+
+
 
 
 
@@ -927,8 +1090,53 @@ body {font-family: 'Goldman', sans-serif;}
 
 
 /* footer 설정 */
-.footer {
+footer {width: 100%;
    height: 300px;
-   width: 100%;
    background-color: #000;
+   color: #fff;}
+
+footer div {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+footer div .menu1 {
+  width: 30%;
+  margin-left: 35%;
+  height: 20%;
+  padding-top: 50px;
+  display: flex;
+justify-content: space-between;
+align-items: center;}
+footer div .menu1 li {}
+footer div .menu1 a {
+  font-size: 16px;
+  color: #fff;
+}
+footer div .menu1 a:hover {
+  color: #d1d1d1;
+}
+
+footer div .menu2 {
+  margin-top: 30px;
+}
+footer div .menu2 li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+
+
+
+
+@media (min-width:1290px) and (max-width:1500px){
+   .box2 .mainImg {height: 70%;}
+   .box2 .mainImg li {
+      left: 0%;
+      top: 10%;
+      display: none; 
+      overflow: hidden;
+   }
+   .box2 .trailer li {}
 }

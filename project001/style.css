@@ -102,7 +102,7 @@ img {border: none;
                bottom: 23%;}
 .box2 .txtBox h2 {font-size: 71px;
                   color: #FBF9F1;
-                  letter-spacing: 20px;
+                  letter-spacing: 10px;
                   margin-bottom: 55px;}
 .box2 .txtBox strong {font-size: 24px;
                       color: #FBF9F1;}
@@ -657,10 +657,10 @@ img {border: none;
 
 .box8 .VRm {width: 85%;
             margin: 0 auto;
-            height: 740px;
+            height: 100%;
             overflow: hidden;}
 .box8 .VRm img {width: 100%;
-                height: 100%;}
+                height: calc(100% - 80px);}
 
 .box8 .VRm a {position: absolute;
               left: 50%;
@@ -774,7 +774,7 @@ footer .imgBox img {
 }
 
 footer .fmenu1 {
-       width: 17%;
+       width: 25%;
        height: 60%;
 }
 footer .fmenu1 ul {
@@ -789,11 +789,14 @@ footer .fmenu1 li a {
        font-size: 20px;
        color: #EEE6C4;
 }
+footer .fmenu1 li:nth-child(1) a {
+       font-weight: bold;
+       color: #F0DC85;}
 footer .fmenu1 li a:hover {color: #F0DC85;}
 
 
 footer .fmenu2 {
-       width: 20%;
+       width: 30%;
        height: 60%;
        position: relative;
 }
@@ -813,6 +816,7 @@ footer .fmenu2 p {position: absolute;
 left: 0;
 bottom: 0;
 width: 100%;
-color: #EEE6C4;
+color: #534E3B;
 font-size: 17px;
+font-weight: bold;
 }

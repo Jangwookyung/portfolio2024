@@ -161,6 +161,7 @@ $(function(){
         if(confirm('장바구니에 추가되었습니다.\n장바구니로 이동하시겠습니까?')){
             alert("장바구니로 이동합니다.");
             $('.addcart').css({'display':'block'})
+            $('.box1').addClass('fixed')
             $('.box1-inner li .new').css({'display':'block'}).text(addnew)
 
 
@@ -216,6 +217,8 @@ $(function(){
     // 장바구니 아이콘 클릭시 
     var clickCount = 0;
     $('.fa-shopping-cart').click(function(){
+        $('.box1').addClass('fixed')
+        $('.box1-inner li .new').css({'display':'block'}).text(addnew+1)
 
         // 클릭 횟수 증가
         clickCount++;
@@ -241,7 +244,6 @@ $(function(){
 
         }
 
-
     });
 
 
@@ -252,6 +254,8 @@ $(function(){
     // 쇼핑 이어하기
     $('.addcart .cart-button .reset').click(function(){
         $('.addcart').css({'display':'none'})
+        
+        $('.box1').removeClass('fixed')
     })
 
 

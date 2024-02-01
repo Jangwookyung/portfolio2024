@@ -521,7 +521,7 @@ header nav a:hover:before, header nav a:hover:after {
     height: 100%;
 }
 
-.prof-left .imgBox.on li {
+.prof-left .imgBox li.on {
     transform: rotateY(180deg);
 }
 

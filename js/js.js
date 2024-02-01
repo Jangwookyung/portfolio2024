@@ -63,8 +63,8 @@ $(function(){
 
         // 프로필 이미지가 5초에 한번씩 뒤집히기
         setInterval(function() {
-            $('.prof-left .imgBox').toggleClass('on');
-        }, 5000);
+            $('.prof-left .imgBox li').toggleClass('on');
+        }, 4000);
     });
 
     // 원형 차트에 대한 애니메이션 함수

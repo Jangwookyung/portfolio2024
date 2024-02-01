@@ -122,13 +122,6 @@ $(function(){
 
 
 
-    // 프로젝트 이미지 클릭했을때
-    $('.project-inner .back .me').click(function(){
-        
-    })
-
-
-
 
     // 푸터 시작할때 애니메이션
     setTimeout(function() {

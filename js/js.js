@@ -37,9 +37,7 @@ $(function(){
         // 헤더 위치
         $('header nav').stop().animate({'top':'67%'},900)
         // 타이틀 위치
-        $('.main-inner .titBox').stop().animate({'top':'22%'},900)
-        // 메인 배경 공
-        $('.main-inner .back').removeClass('hidden')
+        $('.main-inner .titBox').stop().animate({'top':'28%'},900)
     });
 
 
@@ -61,10 +59,7 @@ $(function(){
         animateChart('.profile .skill-chart4', 'dash4');
         animateChart('.profile .skill-chart5', 'dash5');
 
-        // 프로필 이미지가 5초에 한번씩 뒤집히기
-        setInterval(function() {
-            $('.prof-left .imgBox li').toggleClass('on');
-        }, 4000);
+        
     });
 
     // 원형 차트에 대한 애니메이션 함수
@@ -108,7 +103,7 @@ $(function(){
         $('.popup li').removeClass('on');
 
         // 클릭된 버튼과 관련된 concept 클래스에 on 클래스 추가
-        $('.concept-' + (p - 1)).addClass('on');
+        $('.concept-' + (p)).addClass('on');
 
         // 팝업 스크롤을 맨 위로 이동
         $('.popup').scrollTop(0);

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="img/favicon3.png"> <!-- Android -->
-    <link rel="apple-touch-icon" href="img/favicon3.png"> <!-- iOS -->
+    <link rel="shortcut icon" href="img/logo.png"> <!-- Android -->
+    <link rel="apple-touch-icon" href="img/logo.png"> <!-- iOS -->
     <title>Jang Woo Kyung</title>
 
     <!-- 외부스타일시트연결 -->
@@ -15,7 +15,6 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/js.js"></script>
-    <script src="js/js-1.js"></script>
 
     <!-- 폰트어썸 연결 -->
     <script src="https://kit.fontawesome.com/dc9b491e4c.js" crossorigin="anonymous"></script>
@@ -24,8 +23,8 @@
 
 <body>
 
-    <!-- 마우스 커서 -->
-    <div class="cursor"><img src="img/cursor.png" alt=""></div>
+    <!-- 마우스 커서 
+    <div class="cursor"><img src="img/cursor.png" alt=""></div>-->
 
 
     <!-- 로고 & 메뉴 -->
@@ -33,7 +32,7 @@
         <p><a href="index.html"><img src="img/logo.png" alt=""></a></p>
         <nav>
             <ul>
-                <li><a href="#">MAIN</a><div class="hov1"></div></li>
+                <li><a href="#">INDEX</a><div class="hov1"></div></li>
                 <li><a href="#">PROFILE</a><div class="hov2"></div></li>
                 <li><a href="#">PROJECTS</a><div class="hov3"></div></li>
             </ul>
@@ -45,7 +44,7 @@
     <div class="intro">
         <div class="wrapper">
             <div class="typing-demo">
-                Welcome to My Page!<img src="img/logo.png" alt="" width="100px" height="100px">
+                WELCOME TO MY PAGE !
             </div>
         </div>
     </div>
@@ -55,25 +54,18 @@
     <section class="main">
         <article class="main-inner">
             <div class="titBox">
-                <h2>Hello! Welcome To My</h2>
-                <ul class="title">
-                    <li><img src="img/p.png" alt=""></li>
-                    <li><img src="img/or.png" alt=""></li>
-                    <li><img src="img/t.png" alt=""></li>
-                    <li><img src="img/fol.png" alt=""></li>
-                    <li><img src="img/i.png" alt=""></li>
-                    <li><img src="img/o.png" alt=""></li>
-                </ul>
+                <h2>HELLO ! WELCOME TO MY</h2>
+                <div class="txtBox">
+                    <div class="title">
+                        <img src="img/title.png" alt="">
+                    </div>
+                    <div class="imgBox">
+                        <img src="img/star.png" alt="" class="star1">
+                        <img src="img/star.png" alt="" class="star2">
+                        <img src="img/star.png" alt="" class="star3">
+                    </div>
+                </div>
             </div>
-            <!-- 뒷 배경 설정 -->
-            <ul class="back">
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li><img src="img/main-backball.png" alt=""></li>
-            </ul>
         </article>
     </section>
 
@@ -81,41 +73,22 @@
     <!-- 프로필 설정 -->
     <section class="profile">
         <div class="profile-inner">
-        
-        <!-- 프로필 배경 공 -->
-            <ul class="back">
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li><img src="img/main-backball.png" alt=""></li>
-            </ul>
-        
-            <!-- 프로필 왼쪽 칸 -->
             <article class="prof-left">
                 <!-- 프로필 사진 -->
-                <ul class="imgBox">
-                    <li>
-                        <div class="front"><img src="img/profile.png" alt="" ></div>
-                        <div class="back"><img src="img/profile2.png" alt="" ></div>
-                    </li>
-                </ul>
-                <!-- 프로필 문구 -->
-                <div class="txtBox">
-                    <p>끊임없는 <b>성장</b>과 <b>발전</b>을<br>
-                    추구하는 디자이너입니다.</p>
+                <div class="prof-img">
+                    <img src="img/name.png" alt="" >
                 </div>
+
+                <!-- contact -->
                 <div class="about">
                     <ul>
                         <li>
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            Jang Woo Kyung / <span>장우경</span>
+                            <span>BIRTH</span>
+                            만 23세, 2000年                            
                         </li>
                         <li>
-                            <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                            2000 (만 23세)
-                        </li>
-                        <li>
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            wookyung43@gmail.com
+                            <span>EMAIL</span>
+                            <a href="mailto:wookyung43@gmail.com" title="이메일 보내기">wookyung43@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -127,78 +100,91 @@
 
                     <!-- 학력 -->
                     <div class="edu">
-                        <h2>Education</h2>
+                        <p class="title">
+                            <img src="img/s-star.png" alt="" width="30px" height="30px" style="margin-right: 20px;" class="starimg">
+                            <img src="img/Education.png" alt="">
+                        </p>
                         <ul>
                             <li><span>2018</span>대전둔산여자고등학교 졸업</li>
                             <li><span>2019</span>한국방송통신대학교 입학</li>
                             <li class="now"><span>2024</span>NCS 과정 수료</li>
                         </ul>
-                        <img src="img/line.png" alt="">
+                    </div>
+
+                    <!-- 키워드 -->
+                    <div class="keywd">
+                        <p class="title">
+                            <img src="img/s-star.png" alt="" width="30px" height="30px" style="margin-right: 20px;" class="starimg">
+                            <img src="img/keywords.png" alt="">
+                        </p>
+                        <ul>
+                            <li><span>#감각적인</span></li>
+                            <li><span>#창의성</span></li>
+                            <li><span>#완벽주의</span></li>
+                            <li><span>#공감</span></li>
+                            <li><span>#객관적인</span></li>
+                            <li><span>#융통성</span></li>
+                            <li><span>#독창성</span></li>
+                            <li><span>#예술</span></li>
+                        </ul>
                     </div>
 
                     <!-- 스킬 -->
                     <div class="skill">
-                        <h2>Program Skill</h2>
+                        <p class="title">
+                            <img src="img/s-star.png" alt="" width="30px" height="30px" style="margin-right: 20px;" class="starimg">
+                            <img src="img/skill.png" alt="">
+                        </p>
                         <!-- 원형 차트 -->
                         <div class="chart">
                             <div class="skill-chart1">
                                 <svg width="100" height="100" fill="none" stroke-linecap="round">
-                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#00C9FD" stroke-width="10"></circle>
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#877AA7" stroke-width="10"></circle>
                                 </svg>
-                                <img src="img/skill1.png" alt="">
-                                <p>Photoshop</p>
+                                <img src="img/icon1.png" alt="">
+                                <p>PHOTOSHOP</p>
                             </div>
                             <div class="skill-chart2">
                                 <svg width="100" height="100" fill="none" stroke-linecap="round">
-                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#A259FF" stroke-width="10"></circle>
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#877AA7" stroke-width="10"></circle>
                                 </svg>
-                                <img src="img/skill2.png" alt="">
-                                <p>Figma</p>
+                                <img src="img/icon2.png" alt="">
+                                <p>FIGMA</p>
                             </div>
                             <div class="skill-chart3">
                                 <svg width="100" height="100" fill="none" stroke-linecap="round">
-                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#FF5C33" stroke-width="10"></circle>
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#877AA7" stroke-width="10"></circle>
                                 </svg>
-                                <img src="img/skill3.png" alt="">
-                                <p>Html</p>
+                                <img src="img/icon3.png" alt="">
+                                <p>HTML</p>
                             </div>
                             <div class="skill-chart4">
                                 <svg width="100" height="100" fill="none" stroke-linecap="round">
-                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#007DB7" stroke-width="10"></circle>
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#877AA7" stroke-width="10"></circle>
                                 </svg>
-                                <img src="img/skill4.png" alt="">
-                                <p>Css</p>
+                                <img src="img/icon4.png" alt="">
+                                <p>CSS</p>
                             </div>
                             <div class="skill-chart5">
                                 <svg width="100" height="100" fill="none" stroke-linecap="round">
-                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#FB9C28" stroke-width="10"></circle>
+                                    <circle class="circle" cx="50" cy="50" r="45" stroke="#877AA7" stroke-width="10"></circle>
                                 </svg>
-                                <img src="img/skill5.png" alt="">
-                                <p>Javascript</p>
+                                <img src="img/icon5.png" alt="">
+                                <p>JAVASCRIPT</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- 성격 -->
                     <div class="prsnl">
-                        <h2>Personality</h2>
+                        <div class="title">
+                            <img src="img/s-star.png" alt="" width="30px" height="30px" style="margin-right: 20px;" class="starimg">
+                            <img src="img/personanlity.png" alt="">
+                        </div>
                         <p>MBTI : 논리적인 사색가, 논리술사 (INTP)</p>
-                        <img src="img/personality.png" alt="">
-                    </div>
-
-                    <!-- 키워드 -->
-                    <div class="keywd">
-                        <h2>Keywords</h2>
-                        <ul>
-                            <li><span>감각적인</span></li>
-                            <li><span>창의성</span></li>
-                            <li><span>예술</span></li>
-                            <li><span>공감</span></li>
-                            <li><span>완벽주의</span></li>
-                            <li><span>세심함</span></li>
-                            <li><span>객관적인</span></li>
-                            <li><span>융통성</span></li>
-                        </ul>
+                        <div class="imgBox">
+                            <img src="img/graph.png" alt="">
+                        </div>
                     </div>
 
                 </div>
@@ -211,51 +197,55 @@
     <!-- 프로젝트 칸 설정 -->
     <section class="project">
         <div class="project-inner">
-            
-            <!-- 뒷 배경 공 설정 -->
-            <ul class="back">
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li><img src="img/main-backball.png" alt=""></li>
-                <li class="me"><img src="img/charactor.png" alt=""></li>
-            </ul>
     
             <!-- 프로젝트 첫번째 칸 -->
             <article class="project-1">
+                <h2>
+                    <span><img src="img/s-star.png" alt=""></span>
+                    prehistory museum
+                    <span><img src="img/s-star.png" alt=""></span>
+                </h2>
                 <div class="imgBox">
                     <img src="img/mockup1.png" alt="">
                 </div>
-                <h2>대전선사박물관</h2>
                 <p>[ #리뉴얼사이트 #레이아웃구성 #탭바 ]</p>
                 <ul>
-                    <li class="btn"><a href="#">Concept View</a></li>
-                    <li><a href="project001/index.html" target="_blank">Page link</li></a>
+                    <li class="btn"><a href="#">CONCEPT VIEW</a></li>
+                    <li><a href="project001/index.html" target="_blank">PAGE LINK</li></a>
                 </ul>
             </article>
     
             <!-- 프로젝트 두번째 칸 -->
             <article class="project-2">
+                <h2>
+                    <span><img src="img/s-star.png" alt=""></span>
+                    panasonic
+                    <span><img src="img/s-star.png" alt=""></span>
+                </h2>
                 <div class="imgBox">
                     <img src="img/mockup2.png" alt="">
                 </div>
-                <h2>파나소닉 카메라</h2>
                 <p>[ #텍스트애니메이션 #서브페이지 ]</p>
                 <ul>
-                    <li class="btn"><a href="#">Concept View</a></li>
-                    <li><a href="project002/index.html" target="_blank">Page link</li></a>
+                    <li class="btn"><a href="#">CONCEPT VIEW</a></li>
+                    <li><a href="project002/index.html" target="_blank">PAGE LINK</li></a>
                 </ul>
             </article>
     
             <!-- 프로젝트 세번째 칸 -->
             <article class="project-3">
+                <h2>
+                    <span><img src="img/s-star.png" alt=""></span>
+                    fan page
+                    <span><img src="img/s-star.png" alt=""></span>
+                </h2>
                 <div class="imgBox">
                     <img src="img/mockup3.png" alt="">
                 </div>
-                <h2>도경수</h2>
                 <p>[ #스크롤슬라이드 #팝업 #가로스크롤 ]</p>
                 <ul>
-                    <li class="btn"><a href="#">Concept View</a></li>
-                    <li><a href="project003/index.html" target="_blank">Page link</a></li>
+                    <li class="btn"><a href="#">CONCEPT VIEW</a></li>
+                    <li><a href="project003/index.html" target="_blank">PAGE LINK</a></li>
                 </ul>
             </article>
 
